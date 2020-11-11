@@ -1,0 +1,1 @@
+label chose_ghosts:

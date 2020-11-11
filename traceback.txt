@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+WindowsError: [Error 2] The system cannot find the file specified: 'C:\\Users\\Nitsan\\AppData\\Roaming/RenPy/Thegangsofravenforest-1605112676\\persistent.new'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\main.py", line 581, in main
+    renpy.persistent.update(True)
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\persistent.py", line 391, in update
+    save()
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\persistent.py", line 407, in save
+    renpy.loadsave.location.save_persistent(data)
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\savelocation.py", line 490, in save_persistent
+    l.save_persistent(data)
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\savelocation.py", line 350, in save_persistent
+    safe_rename(fn_tmp, fn_new)
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\loadsave.py", line 306, in safe_rename
+    os.unlink(new)
+WindowsError: [Error 2] The system cannot find the file specified: 'C:\\Users\\Nitsan\\AppData\\Roaming/RenPy/Thegangsofravenforest-1605112676\\persistent.new'
+
+Windows-8-6.2.9200
+Ren'Py 7.3.5.606
+The gangs of raven forest 1.0
+Wed Nov 11 21:05:27 2020
