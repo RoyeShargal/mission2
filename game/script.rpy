@@ -2,7 +2,7 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
+#test for git
 define a = Character("Albert", color="#0e64e6", what_color="#0e64e6")
 define j = Character("Julian", color="#995f03", what_color="#995f03")
 define f = Character("Frank", color="#d48506", what_color="#d48506")
