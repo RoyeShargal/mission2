@@ -1,13 +1,13 @@
-Thu Nov 12 15:01:10 2020
+Thu Nov 12 23:43:23 2020
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
 
-Bootstrap to the start of init.init took 0.05s
+Bootstrap to the start of init.init took 0.06s
 Early init took 0.00s
 Loader init took 0.03s
 Loading error handling took 0.02s
-Loading script took 0.15s
+Loading script took 0.09s
 Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -15,19 +15,18 @@ Running init code took 0.08s
 Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Nitsan\\AppData\\Roaming/RenPy/backups\\mission2':
-Dump and make backups. took 0.07s
+Dump and make backups. took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.01s
 DPI scale factor: 3.000000
-Creating interface object took 0.12s
+Creating interface object took 0.10s
 Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.05s
+Init translation took 0.01s
+Build styles took 0.01s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.05s
@@ -286,11 +285,11 @@ Texture testing:
 - 2048px textures work.
 Root FBO is: 0
 FBO Maximum Texture Size: 2048
-Total time until interface ready: 1.3639998436s
+Total time until interface ready: 1.15299987793s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.019667 seconds.
-- Frame drawn at 0.030667 seconds.
-- Frame drawn at 0.126667 seconds.
-- Frame drawn at 0.135667 seconds.
-- 0.135667 seconds to render 5 frames.
+- Frame drawn at 0.018667 seconds.
+- Frame drawn at 0.045667 seconds.
+- Frame drawn at 0.143667 seconds.
+- Frame drawn at 0.154667 seconds.
+- 0.154667 seconds to render 5 frames.

@@ -15,6 +15,7 @@ label first_mission:
         $ other_boss = "Julian"
 
     scene bg motel
+    show screen stats
 
     n "Where is my gun?? I am going kill them!"
 

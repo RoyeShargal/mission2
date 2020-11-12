@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/first_choice.rpy", line 33: expected statement.
-    chose_fight = True
-                ^
-
-File "game/first_choice.rpy", line 47: expected statement.
-    devils = True
-           ^
-
-File "game/first_choice.rpy", line 51: expected statement.
-    ghosts = True
-           ^
+File "game/script.rpy", line 10: could not parse statement.
+    play sound "rain.mp3" volume 10
+                          ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Nov 12 14:55:59 2020
+Thu Nov 12 23:40:28 2020
