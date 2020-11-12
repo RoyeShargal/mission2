@@ -2,9 +2,15 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 29: expected statement.
-    flash
-         ^
+File "game/script.rpy", line 47: invalid syntax
+    gang = "Devils"; $ other_gang = "Ghosts" $ boss = "Julian" $ other_boss = "Frank"
+                      ^
+    
+
+File "game/script.rpy", line 49: invalid syntax
+    gang = "Ghosts" $ other_gang = "Devils" $ boss = "Frank" $ other_boss = "Julian"
+                     ^
+    
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Nov 11 21:01:10 2020
+Thu Nov 12 02:02:43 2020
