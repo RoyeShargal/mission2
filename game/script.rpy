@@ -26,7 +26,7 @@ label start:
             $ devils = True
             jump chose_devils
 
-        "Offer to work for the ghosts for protecto":
+        "Offer to work for the ghosts for protection":
             $ ghosts = True
             jump chose_ghosts
 
