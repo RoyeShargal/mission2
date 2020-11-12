@@ -22,11 +22,11 @@ label start:
     menu:
         "You have 3 choices"
 
-        "Offer to work for the devils":
+        "Offer to work for the devils for protection":
             $ devils = True
             jump chose_devils
 
-        "Offer to work for the ghosts":
+        "Offer to work for the ghosts for protecto":
             $ ghosts = True
             jump chose_ghosts
 
