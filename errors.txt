@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 10: could not parse statement.
-    play sound "rain.mp3" volume 10
-                          ^
+File "game/first_mission.rpy", line 52: indentation mismatch.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Nov 12 23:40:28 2020
+Fri Nov 13 18:57:09 2020
