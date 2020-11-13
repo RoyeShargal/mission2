@@ -6,7 +6,6 @@ label chose_devils:
     j "{cps=30}Albert! where is my money? Did you really think you could steal from me and live?"
     a "{cps=4}...{nw}"
     play sound "gunshot.mp3"
-    play sound "rain.mp3"
     "{b}Julian pulls out his gun, puts it to Albert’s head and pulls the trigger.\n" with kill
     j "{cps=30}Get his friend out of here!"
     #maybe change screen here

@@ -3,11 +3,10 @@ define a = Character("Albert", color="#0e64e6", what_color="#0e64e6", what_prefi
 define j = Character("Julian", color="#995f03", what_color="#995f03", what_prefix = '"', what_suffix = '"')
 define f = Character("Frank", color="#d48506", what_color="#d48506", what_prefix = '"', what_suffix = '"')
 define n = Character("[name]", color="#F72C00", what_color="#F72C00", what_prefix = '"', what_suffix = '"')
-define boss = Character("[boss]")
-define other_boss = Character("[other_boss]")
-define gang = Character("[gang]")
-define other_gang = Character("[other_gang]")
-image bg black = "#000"
+define boss = Character("[boss]", color="#ff530f", what_color="#ff530f", what_prefix = '"', what_suffix = '"')
+define other_boss = Character("[other_boss]", color="#ff530f", what_color="#ff530f", what_prefix = '"', what_suffix = '"')
+define gang = "gang"
+define other_gang = "other_gang"
 
 #Image resizing
 image bg room = im.Scale("bg room.png", 1920, 1080, bilinear=True)
@@ -17,6 +16,7 @@ image bg diner= im.Scale("bg diner.png", 1920, 1080, bilinear=True)
 image bg dinerParking= im.Scale("bg dinerParking.png", 1920, 1080, bilinear=True)
 image bg forest= im.Scale("bg forest.png", 1920, 1080, bilinear=True)
 image bg motel= im.Scale("bg motel.png", 1920, 1080, bilinear=True)
+image bg black = "#000"
 
 #Booleans
 default ghosts = False
