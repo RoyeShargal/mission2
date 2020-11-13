@@ -14,6 +14,10 @@ label first_mission:
         $ boss = "Frank"
         $ other_boss = "Julian"
 
+    #Ending tests
+    #if chose_fight:
+    #    jump ending_scene_2
+    #jump ending_scene_1
     scene bg motel
     show screen stats
 
@@ -55,7 +59,7 @@ label first_mission:
             scene bg black with kill
             centered "{size=+50}{color=#F72C00}{cps=20}You and [boss] died" with dissolve
             jump dead
-            
+
 
         "Destroy their supply":
             n "{cps=30}I'll shoot thier bomb supply! \n That will hurt them"
