@@ -41,3 +41,5 @@ label first_mission:
 
         "Steal the truck":
             "You steal the truck"
+
+jump second_mission
