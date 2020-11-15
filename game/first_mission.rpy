@@ -1,7 +1,7 @@
 label first_mission:
     #TODO: fix title screen
     scene bg black
-    centered "{size=+50}{color=#F72C00}The Revenge" with dissolve
+    centered "{font=ARMY RUST.ttf}{size=+100}{color=#912119}The Revenge" with dissolve
 
     if devils:
         $ gang = "Devils"
@@ -52,7 +52,7 @@ label first_mission:
                 f "{cps=40}HE'S ARMED! STOP HIM!!"
 
             scene bg black with kill
-            centered "{size=+50}{color=#F72C00}{cps=20}You and [boss] died" with dissolve
+            centered "{font=ARMY RUST.ttf}{size=+50}{color=#F72C00}{cps=20}You and [boss] died" with dissolve
             jump dead
 
 

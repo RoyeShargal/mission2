@@ -5,7 +5,7 @@ While running game code:
     $ name = renpy.input("Enter your name to start", "", length=20)
   File "game/script.rpy", line 8, in <module>
     $ name = renpy.input("Enter your name to start", "", length=20)
-Exception: Could not find font u'Courier New.ttf'.
+Exception: Could not find font u'TypewriterRusticRNH-Regular.ttf'.
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -84,9 +84,9 @@ Full traceback:
     face = load_face(fn)
   File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\text\font.py", line 640, in load_face
     raise Exception("Could not find font {0!r}.".format(orig_fn))
-Exception: Could not find font u'Courier New.ttf'.
+Exception: Could not find font u'TypewriterRusticRNH-Regular.ttf'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  1.0
-Sun Nov 15 02:56:38 2020
+Sun Nov 15 03:27:11 2020
