@@ -56,12 +56,11 @@ label chose_kill:
             n "{cps=35}Ok I can do this.{w=2}"
             #play shoot sound
             scene bg black with kill
-            $ money += 5000
             scene bg motel
             show jason
             jason "{cps=35}I knew I could count on you, you earned this"
+            $ money += 5000
             "Money increased by $5000" with dissolve
-            #jump after misson 2
 
         "I can't do this":
             scene bg motel
@@ -73,4 +72,6 @@ label chose_kill:
             jason "{cps=35}I respect that, I hate those sons of bitches too, let me know if you ever need help"
             "Attack increased by 1" with dissolve
             $ attack += 1
-            #jump after misson 2
+
+        $ fame += 100
+        #jump after misson 2

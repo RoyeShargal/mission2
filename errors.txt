@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/stats.rpy", line 17: u'JMH' is not a keyword argument or valid child for the text statement.
-    text "{color=#912119}{font="JMH Typewriter mono.ttf"}Game Designers:" xalign 0.5
-                                   ^
+File "game/second_mission.rpy", line 76: expected menuitem
+    $ fame += 100
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Nov 15 17:20:21 2020
+Sun Nov 15 19:55:53 2020

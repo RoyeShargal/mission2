@@ -16,7 +16,7 @@ label start:
     scene bg forest
 
     #show Albert
-    #can add why albert stole from them if the game is not too long
+    #can add option to skip explanation from Albert
     a "{cps=35}I fucked up %(name)s, my brother has been gambling again,
      and it got out of hand, he lost everything and took out a huge loan."
     a "{cps=30}I accepted a job and stole guns from the gangs operating here so I can pay him back, but they found out"

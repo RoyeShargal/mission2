@@ -123,7 +123,8 @@ label ending_5:
     return
 
 label credits:
+    #Add which ending discovered
     scene bg black
-    show screen ending_credits
+    show screen ending_credits with Dissolve(2.0)
     pause (40)
     return

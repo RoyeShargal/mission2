@@ -59,7 +59,7 @@ label first_mission:
         "Destroy their supply":
             n "{cps=30}I'll shoot their bomb supply!"
             scene bg black with flash
-            n "{cps=45}Thay are coming out! I gotta go fast!"
+            n "{cps=45}They are coming out! I gotta go fast!"
             scene bg motel
             $ fame += 50
             #jump first_guy
