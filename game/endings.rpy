@@ -4,6 +4,7 @@ label ending_scene_1:
         scene bg devils
     else:
         scene bg ghosts
+        show frank at right
     hide screen stats
 
     "{cps=40}You and your men surround [boss], he looks at you in distress"
@@ -22,13 +23,15 @@ label ending_scene_1:
 label ending_1:
 
     play sound "gunshot.mp3"
+    hide frank with kill
     "You close your eyes and pull the trigger, everything is silent
-    but the sound of the shot and [boss]'s body falling to the ground." with kill
+    but the sound of the shot and [boss]'s body falling to the ground." with dissolve
     play music "ending_music.mp3" fadein 2.0
     "{cps=30}You thought you would feel something, but the emptiness you have been feeling since you started this still remains."
     "{cps=30}Maybe [boss] was right, maybe you did become as bad as him,
      but at least you know he won't do what he did to Albert to anyone else."
     "{b}{size=+5}At least you got your revenge." with dissolve
+    jump credits
 
     return
 
@@ -43,6 +46,7 @@ label ending_2:
     n "{cps=30}No, but I won't become like him, it’s not what Albert would have wanted."
     "{cps=30}He gives you a small nod, and you all walk away."
 
+    jump credits
     return
 
 label ending_scene_2:
@@ -81,6 +85,8 @@ label ending_scene_3:
 
 label ending_3:
     play music "ending_music.mp3"
+    if ghosts:
+        show frank at right
     "{cps=30}You shake [other_boss]'s hand, and tell him you will let it go."
     "{cps=30}You walk back to your men, stand beside them and whisper"
     n "{b}{size=+5}Kill them"
@@ -90,12 +96,14 @@ label ending_3:
     There are bodies all around you."
     "{cps=30}Blood is dripping down your face, but it is not your blood."
     "{cps=30}You finally got revenge."
-    "{b}{size=+5}Was it worth it?" with dissolve
+    "{b}{size=+5}Was it worth it?" with Dissolve(1.0)
 
+    jump credits
     return
 
 label ending_4:
 
+    jump credits
     return
 
 label ending_5:
@@ -110,3 +118,12 @@ label ending_5:
     police "{cps=35}This is the police, get out with your hands on your head"
     scene bg dinerParking
     "{cps=35}As soon as you leave the diner, they handcuff you and put you in the police car."
+
+    jump credits
+    return
+
+label credits:
+    scene bg black
+    show screen ending_credits
+    pause (40)
+    return

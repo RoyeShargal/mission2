@@ -1,7 +1,7 @@
 label first_mission:
     #TODO: fix title screen
     scene bg black
-    centered "{font=ARMY RUST.ttf}{size=+100}{color=#912119}The Revenge" with dissolve
+    centered "{font=ARMY RUST.ttf}{size=+100}{color=#912119}The Revenge" with Dissolve(1.0)
 
     if devils:
         $ gang = "Devils"
@@ -15,9 +15,9 @@ label first_mission:
         $ other_boss = j
 
     #Ending tests
-    #if chose_fight:
-        #jump ending_scene_2
-    #jump ending_scene_1
+    if chose_fight:
+        jump ending_scene_2
+    jump ending_scene_1
     scene bg motel
     show screen stats
 

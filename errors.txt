@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/endings.rpy", line 64: expected ':' not found.
-    label ending_scene_3
-                        ^
+File "game/stats.rpy", line 17: u'JMH' is not a keyword argument or valid child for the text statement.
+    text "{color=#912119}{font="JMH Typewriter mono.ttf"}Game Designers:" xalign 0.5
+                                   ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Nov 15 01:50:44 2020
+Sun Nov 15 17:20:21 2020
