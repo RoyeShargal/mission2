@@ -31,13 +31,14 @@ default stole_drugs = False
 
 #Transitions
 define flash = Fade(0.1, 0.0, 0.1, color="#fff")
-define kill = Fade(0.5, 0.0, 1, color="#b00000")
+define kill = Fade(0.4, 0.0, 1, color="#b00000")
 
 #Stats
 define health = 2
 define money = 0
 define attack = 1
 define defence = 1
+define ending = 1
 
 define honor = 20 #Invisible, every bad action reduces honor and good ones increase it
                     #Can tell the player how he played at the end.

@@ -15,9 +15,9 @@ label first_mission:
         $ other_boss = j
 
     #Ending tests
-    #if chose_fight:
-        #jump ending_scene_2
-    #jump ending_scene_1
+    if chose_fight:
+        jump ending_scene_2
+    jump ending_scene_1
     scene bg motel
     show screen stats
 

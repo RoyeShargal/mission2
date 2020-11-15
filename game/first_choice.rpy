@@ -10,7 +10,7 @@ label chose_devils:
     "{b}Julian pulls out his gun, puts it to Albert’s head and pulls the trigger.\n" with kill
     j "{cps=30}Get his friend out of here!"
     #maybe change screen here
-    n "{b}{size=+5}I will make him pay for this." with dissolve
+    n "{size=+5}I will make him pay for this." with dissolve
 
     stop sound
     jump first_mission
@@ -29,7 +29,7 @@ label chose_ghosts:
     play sound "gunshot.mp3"
     "You hear a gunshot and see Albert fall to the ground" with kill
     "{cps=30}When you turn around the woods are empty once again"
-    n "{b}{size=+5}I will make him pay for this." with dissolve
+    n "{size=+5}I will make him pay for this." with dissolve
 
     hide frank
     stop sound
@@ -43,9 +43,10 @@ label chose_fight:
     Albert is staring out of the window, he is terrified"
     #louder gunshot
     play sound "gunshot.mp3"
-    "You hear a loud gunshot and see the window breaking and Albert falling to the ground" with kill
+    "You hear a loud gunshot, see the window breaking and Albert falling to the ground" with kill
     "{cps=35}You run to Albert, but he is already dead"
-    n "{b}{size=+5}I will make them pay for this." with dissolve
+    n "{cps=35}This must have been one of the gangs."
+    n "{size=+5}I will make them pay for this." with dissolve
 
     menu:
         "who do you go after first"

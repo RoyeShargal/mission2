@@ -30,7 +30,9 @@ label ending_1:
     "{cps=30}You thought you would feel something, but the emptiness you have been feeling since you started this still remains."
     "{cps=30}Maybe [boss] was right, maybe you did become as bad as him,
      but at least you know he won't do what he did to Albert to anyone else."
-    "{b}{size=+5}At least you got your revenge." with dissolve
+    "{size=+5}At least you got your revenge." with Dissolve(1.0)
+
+    $ ending = 1
     jump credits
 
     return
@@ -46,6 +48,7 @@ label ending_2:
     n "{cps=30}No, but I won't become like him, it’s not what Albert would have wanted."
     "{cps=30}He gives you a small nod, and you all walk away."
 
+    $ ending = 2
     jump credits
     return
 
@@ -57,13 +60,11 @@ label ending_scene_2:
     "{cps=35}[boss] asks you to meet him at the Bendix diner, you see him sitting alone with a cup of coffee."
 
     menu:
-        ""
-
         "Kill [boss]":
             jump ending_5
 
         "Listen to what [boss] has to say":
-            "You and your men sit in front of the boss"
+            "{cps=35}You and your men sit in front of the boss"
 
 label ending_scene_3:
 
@@ -71,6 +72,8 @@ label ending_scene_3:
     and he is planning on getting to you before you get to him."
     "{cps=35}You look outside and see the other gang armed and heading to the diner."
     scene bg dinerParking
+    if ghosts:
+        show frank at right
     "{cps=35}You and your men pull out your guns and go outside, [other_boss] faces you."
     other_boss "{cps=35}I killed Albert because he deserved it. You are outnumbered,
      we will let you go if you will not come after us."
@@ -85,8 +88,6 @@ label ending_scene_3:
 
 label ending_3:
     play music "ending_music.mp3"
-    if ghosts:
-        show frank at right
     "{cps=30}You shake [other_boss]'s hand, and tell him you will let it go."
     "{cps=30}You walk back to your men, stand beside them and whisper"
     n "{b}{size=+5}Kill them"
@@ -96,13 +97,16 @@ label ending_3:
     There are bodies all around you."
     "{cps=30}Blood is dripping down your face, but it is not your blood."
     "{cps=30}You finally got revenge."
-    "{b}{size=+5}Was it worth it?" with Dissolve(1.0)
+    "{size=+5}Was it worth it?" with Dissolve(1.0)
 
+    $ ending = 3
     jump credits
     return
 
 label ending_4:
 
+    play music "ending_music.mp3"
+    $ ending = 4
     jump credits
     return
 
@@ -119,12 +123,13 @@ label ending_5:
     scene bg dinerParking
     "{cps=35}As soon as you leave the diner, they handcuff you and put you in the police car."
 
+    $ ending = 5
     jump credits
     return
 
 label credits:
-    #Add which ending discovered
     scene bg black
+    centered "{font=ARMY RUST.ttf}{size=+100}{color=#912119}Ending no. [ending]\nout of 5" with Dissolve(2.0)
     show screen ending_credits with Dissolve(2.0)
     pause (40)
     return

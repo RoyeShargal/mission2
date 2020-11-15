@@ -73,5 +73,4 @@ label chose_kill:
             "Attack increased by 1" with dissolve
             $ attack += 1
 
-        $ fame += 100
         #jump after misson 2
