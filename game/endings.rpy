@@ -50,13 +50,26 @@ label ending_scene_2:
     scene bg diner
     hide screen stats
 
-    "{cps=35}[boss] asks you to meet him at the Bendix diner, you see him sitting alone with a cup of coffee,
-    he looks anxious.\nYou and your men sit in front of him."
-    boss "{cps=35}You don’t have to kill me, [other_boss] killed Albert, and he is planning on getting to you before you get to him."
+    "{cps=35}[boss] asks you to meet him at the Bendix diner, you see him sitting alone with a cup of coffee."
+
+    menu:
+        ""
+
+        "Kill [boss]":
+            jump ending_5
+
+        "Listen to what [boss] has to say":
+            "You and your men sit in front of the boss"
+
+label ending_scene_3:
+
+    boss "{cps=35}You don’t have to kill me, [other_boss] killed Albert,
+    and he is planning on getting to you before you get to him."
     "{cps=35}You look outside and see the other gang armed and heading to the diner."
     scene bg dinerParking
     "{cps=35}You and your men pull out your guns and go outside, [other_boss] faces you."
-    other_boss "{cps=35}I killed Albert because he deserved it. You are outnumbered, we will let you go if you will not come after us."
+    other_boss "{cps=35}I killed Albert because he deserved it. You are outnumbered,
+     we will let you go if you will not come after us."
 
     menu:
 
@@ -84,3 +97,16 @@ label ending_3:
 label ending_4:
 
     return
+
+label ending_5:
+    play music "ending_music.mp3"
+    play sound "gunshot.mp3"
+    "You pull out your gun and shoot [boss] in his chest" with dissolve
+    "{cps=35}Everyone in the diner starts screaming, they are all scared of you."
+    "{cps=35}Red and blue lights flash through the window"
+    "{cps=35}You look down at [boss] lying on the ground, he says softly as he struggles to breath"
+    boss "{cps=35}I didn't kill Albert, it was [other_boss]."
+    boss "{cps=35}You killed me for nothing, you are just as bad as him"
+    police "{cps=35}This is the police, get out with your hands on your head"
+    scene bg dinerParking
+    "{cps=35}As soon as you leave the diner, they handcuff you and put you in the police car."

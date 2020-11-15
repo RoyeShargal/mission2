@@ -7,7 +7,7 @@
 label start:
     $ name = renpy.input("Enter your name to start", "", length=20)
     scene bg room
-    play sound "rain.mp3" fadein 2.0
+    play sound "rain.mp3" fadein 2.0 fadeout 20.0
 
     a "{cps=30}%(name)s! Wake up!"
     "{cps=30}You open your eyes and see Albert, your childhood friend.
@@ -17,7 +17,9 @@ label start:
 
     #show Albert
     #can add why albert stole from them if the game is not too long
-    a "{cps=30}I fucked up %(name)s, I have been stealing money from the gangs operating here and they found out."
+    a "{cps=35}I fucked up %(name)s, my brother has been gambling again,
+     and it got out of hand, he lost everything and took out a huge loan."
+    a "{cps=30}I accepted a job and stole guns from the gangs operating here so I can pay him back, but they found out"
     "{cps=40}You heard about those gangs, there are the devils, led by Julian,\n known for their ruthlessness and lack of honor." with flash
     "{cps=40}And the ghosts, led by Frank, they operate in the shadows.\n If you cross them, your only way out is death"
     a "{cps=30}No one can escape them, I don’t know what to do, please help me."

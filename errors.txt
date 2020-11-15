@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/first_mission.rpy", line 52: indentation mismatch.
+File "game/endings.rpy", line 64: expected ':' not found.
+    label ending_scene_3
+                        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri Nov 13 18:57:09 2020
+Sun Nov 15 01:50:44 2020

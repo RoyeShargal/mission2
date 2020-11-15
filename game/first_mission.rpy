@@ -6,54 +6,49 @@ label first_mission:
     if devils:
         $ gang = "Devils"
         $ other_gang = "Ghosts"
-        $ boss = "Julian"
-        $ other_boss = "Frank"
+        $ boss = j
+        $ other_boss = f
     else:
         $ gang = "Ghosts"
         $ other_gang = "Devils"
-        $ boss = "Frank"
-        $ other_boss = "Julian"
+        $ boss = f
+        $ other_boss = j
 
     #Ending tests
     #if chose_fight:
-    #    jump ending_scene_2
+        #jump ending_scene_2
     #jump ending_scene_1
     scene bg motel
     show screen stats
 
     n "{cps=40}Where is my gun?? I am going kill them!"
-    n "{cps=40}There its is! I'll show them'"
+    n "{cps=40}There it is! I'll show them"
     scene bg black
     #add walking sound
     "{cps=2}   {nw}"
 
-    if devils:
-        #scene bg devils
-        scene gangs place
-    else:
-        #scene bg ghosts
-        scene gangs place
-
-    #Maybe add a truck image to the scene
-    n "{cps=30}What is this truck?\nThis must be their bomb supply."
-    n "{cps=30}That's [boss] in the window inside that cabin!"
-    n "{cps=30}Shit, I only have 1 bullet, and there are too many of them inside."
+    scene bg truck
+    n "{cps=30}What is this truck?\nI can see bombs inside, This must be their supply."
+    n "{cps=30}I'm so close to the [gang] territory, but I'm really outnumbered."
+    n "{cps=30}Maybe I can hurt them without risking my life."
 
     menu:
         "What to do"
 
         "Try to kill [boss]":
-            n "{cps=30}Thats it! I'm going in to end it"
-            scene bodyguards
+            n "{cps=30}Thats it! I'm going to end it"
             if devils:
+                scene bg devils
                 j "{cps=45}Oh look, its the thief's little friend"
                 j "{cps=40}That's sweet."
-                n "{cps=25}yo ... your.. your time is up!"
+                n "{cps=25}Your time is up!"
                 j "{cps=40}HE'S ARMED! STOP HIM!!"
             else:
+                scene bg ghosts
+                show frank at right
                 f "{cps=45}Oh look, its the thief's little friend"
                 f "{cps=40}That's sweet."
-                n "{cps=25}yo ... your.. your time is up!"
+                n "{cps=25}Your time is up!"
                 f "{cps=40}HE'S ARMED! STOP HIM!!"
 
             scene bg black with kill
@@ -62,10 +57,11 @@ label first_mission:
 
 
         "Destroy their supply":
-            n "{cps=30}I'll shoot thier bomb supply! \n That will hurt them"
+            n "{cps=30}I'll shoot their bomb supply!"
             scene bg black with flash
             n "{cps=45}Thay are coming out! I gotta go fast!"
             scene bg motel
+            $ fame += 50
             #jump first_guy
             #add SOUNDS
 
@@ -75,3 +71,4 @@ label first_mission:
 jump second_mission
 
 label dead:
+    return
