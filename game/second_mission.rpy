@@ -5,8 +5,11 @@ default isJason = False
 define blackFlash = Fade(0.1, 0.0, 2, color="#000000")
 
 label second_mission:
+    scene bg black
+    centered "{size=+50}{color=#ffffff}A few days later"
     scene bg motel
-    #play knock knock sound
+    play sound "knockknock.wav"
+    $ renpy.pause(1.0)
     n "{cps=40}Who is this???{w=1}"
 
     scene darkdoor with blackFlash
