@@ -54,7 +54,7 @@ label chose_kill:
 
         "Pull the trigger":
             n "{cps=35}Ok I can do this.{w=2}"
-            #play shoot sound
+            play sound "gunshot.mp3"
             scene bg black with kill
             scene bg motel
             show jason
