@@ -44,7 +44,7 @@ label chose_fight:
     #louder gunshot
     play sound "gunshot.mp3"
     "You hear a loud gunshot, see the window breaking and Albert falling to the ground" with kill
-    "{cps=35}You run to Albert, but he is already dead"
+    "{cps=35}You run to Albert, but he is already dead."
     n "{cps=35}This must have been one of the gangs."
     n "{size=+5}I will make them pay for this." with dissolve
 

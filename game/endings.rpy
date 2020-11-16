@@ -56,7 +56,8 @@ label ending_scene_2:
 
     scene bg diner
     hide screen stats
-
+    if ghosts:
+        show frank at right
     "{cps=35}[boss] asks you to meet him at the Bendix diner, you see him sitting alone with a cup of coffee."
 
     menu:
@@ -72,8 +73,8 @@ label ending_scene_3:
     and he is planning on getting to you before you get to him."
     "{cps=35}You look outside and see the other gang armed and heading to the diner."
     scene bg dinerParking
-    if ghosts:
-        show frank at right
+    if devils:
+        show frank
     "{cps=35}You and your men pull out your guns and go outside, [other_boss] faces you."
     other_boss "{cps=35}I killed Albert because he deserved it. You are outnumbered,
      we will let you go if you will not come after us."
@@ -119,9 +120,14 @@ label ending_5:
     "{cps=35}You look down at [boss] lying on the ground, he says softly as he struggles to breath"
     boss "{cps=35}I didn't kill Albert, it was [other_boss]."
     boss "{cps=35}You killed me for nothing, you are just as bad as him"
-    police "{cps=35}This is the police, get out with your hands on your head"
+    police "{cps=35}This is the police! get out with your hands on your head!"
     scene bg dinerParking
     "{cps=35}As soon as you leave the diner, they handcuff you and put you in the police car."
+    "The driver looks back at you and says"
+    driver "{cps=30}That's fucked up, shooting a man in front of all those people, how does anyone do something like that?"
+    n "{cps=3}I....{nw}"
+    n "{cps=20}I though he deserved it."
+    n "{size=+5}I lost control." with Dissolve(1.0)
 
     $ ending = 5
     jump credits
