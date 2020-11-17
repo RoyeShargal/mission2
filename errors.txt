@@ -2,25 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/endings.rpy", line 35: expected statement.
-    ending = 1
-           ^
-
-File "game/endings.rpy", line 51: expected statement.
-    ending = 2
-           ^
-
-File "game/endings.rpy", line 102: expected statement.
-    ending = 3
-           ^
-
-File "game/endings.rpy", line 108: expected statement.
-    ending = 4
-           ^
-
-File "game/endings.rpy", line 125: expected statement.
-    ending = 5
-           ^
+File "game/second_mission.rpy", line 80: expected menuitem
+    jump ending_scene_2
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Nov 16 00:45:27 2020
+Tue Nov 17 11:58:33 2020

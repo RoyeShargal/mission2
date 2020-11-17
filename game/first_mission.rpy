@@ -15,8 +15,8 @@ label first_mission:
         $ other_boss = j
 
     #Ending tests
-    if chose_fight:
-        jump ending_scene_2
+    #if chose_fight:
+        #jump ending_scene_2
     #jump ending_scene_1
     scene bg motel
     show screen stats
@@ -34,27 +34,22 @@ label first_mission:
     n "{cps=30}Maybe I can hurt them without risking my life."
 
     menu:
-        "What to do"
+        "What do you do"
 
         "Try to kill [boss]":
             n "{cps=30}Thats it! I'm going to end it"
             if devils:
                 scene bg devils
-                j "{cps=45}Oh look, its the thief's little friend"
-                j "{cps=40}That's sweet."
-                n "{cps=25}Your time is up!"
-                j "{cps=40}HE'S ARMED! STOP HIM!!"
             else:
                 scene bg ghosts
-                show frank at right
-                f "{cps=45}Oh look, its the thief's little friend"
-                f "{cps=40}That's sweet."
+                boss "{cps=45}Oh look, its the thief's little friend"
+                boss "{cps=40}That's sweet."
                 n "{cps=25}Your time is up!"
-                f "{cps=40}HE'S ARMED! STOP HIM!!"
+                boss "{cps=40}HE'S ARMED! STOP HIM!!"
 
             scene bg black with kill
             play sound "gunshot.mp3"
-            centered "{font=ARMY RUST.ttf}{size=+50}{color=#F72C00}{cps=20}You and [boss] died" with dissolve
+            centered "{font=ARMY RUST.ttf}{size=+50}{color=#F72C00}{cps=20}You and [boss] died" with Dissolve(1.0)
             jump dead
 
 

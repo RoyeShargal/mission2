@@ -29,24 +29,20 @@ label second_mission:
     menu:
         "Ok, give me the details":
             q "{cps=30}He will be in the local cafe tomorrow at 19:00, \n look for the guy with the white striped shirt"
-            n "{cps=30}No problem, give me half now and half after his dead"
-            q "{cps=30}Sure."
-            $ money += 5000
-            "Money increased by $5000" with dissolve
+            n "{cps=30}No problem."
             scene bg black
             centered "{size=+50}{color=#ffffff}The next day"
             jump chose_kill
 
         "No, I have values":
             q "{cps=30}Values ah.."
-            q "{cps=30}Good, exactly what I was looking for.."
             hide q
             show jason
             jason "{cps=30}I'm Jason, nice to meet you.\n I had to make sure you are not some ruthless killer."
-            jason "{cps=30}The [gang] have been forcing me to move their supply. I want to help you fight them."
+            jason "{cps=30}I have been fighting the [gang] for months. I could help you beat them."
             $ Jason = True
-            $ attack += 2
             n "{cps=35}Good, I was looking for another partner"
+            "Jason joined your gang." with dissolve
             #jump after misson 2
 
 label chose_kill:
@@ -61,9 +57,9 @@ label chose_kill:
             scene bg black with kill
             scene bg motel
             show jason
-            jason "{cps=35}I knew I could count on you, you earned this"
-            $ money += 5000
-            "Money increased by $5000" with dissolve
+            jason "{cps=35}I knew I could count on you."
+            $ money += 10000
+            "Money increased by $10000" with dissolve
 
         "I can't do this":
             scene bg motel
@@ -72,8 +68,9 @@ label chose_kill:
             n "{cps=35}I couldn't do it."
             jason "{cps=35}Then why the hell are you in this business anyway?"
             n "{cps=35}The [gang] killed my friend, I can't just let them get away with it"
-            jason "{cps=35}I respect that, I hate those sons of bitches too, let me know if you ever need help"
-            "Attack increased by 1" with dissolve
-            $ attack += 1
+            jason "{cps=35}I respect that, I hate those sons of bitches too, if you wont get your hands dirty, this might help."
+            "Earned tranquilizer gun" with dissolve
 
         #jump after misson 2
+
+    jump ending_scene_2

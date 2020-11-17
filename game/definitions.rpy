@@ -22,6 +22,7 @@ image bg house= im.Scale("bg house.png", 1920, 1080, bilinear=True)
 image bg sniper= im.Scale("bg sniper.png", 1920, 1080, bilinear=True)
 image bg truck= im.Scale("bg truck.png", 1920, 1080, bilinear=True)
 image frank = im.Scale("frank.png",1500, 833, bilinear=True)
+image firstGuy = im.Scale("first_guy.png",805, 1209, bilinear=True)
 image bg black = "#000"
 
 #Booleans
