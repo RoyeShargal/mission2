@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/second_mission.rpy", line 80: expected menuitem
-    jump ending_scene_2
+File "game/second_mission.rpy", line 75: expected menuitem
+    jump third_mission
     ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Nov 17 11:58:33 2020
+Tue Nov 17 23:01:28 2020

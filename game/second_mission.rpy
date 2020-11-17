@@ -43,6 +43,7 @@ label second_mission:
             n "{cps=35}Good, I was looking for another partner."
             "Jason joined your gang." with dissolve
             #jump after misson 2
+            jump third_mission
 
 label chose_kill:
     scene bg sniper
@@ -71,5 +72,6 @@ label chose_kill:
             "Earned tranquilizer gun" with dissolve
 
         #jump after misson 2
+    jump third_mission
 
     jump ending_scene_2
