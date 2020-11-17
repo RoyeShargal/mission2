@@ -35,8 +35,6 @@ label ending_1:
     $ ending = 1
     jump credits
 
-    return
-
 label ending_2:
 
     play music "ending_music.mp3" fadein 2.0
@@ -44,13 +42,12 @@ label ending_2:
     "{cps=30}You close your eyes for a moment, and holster your gun. "
     "{cps=30}Maybe he deserves death, but killing him won’t bring Albert back, it will only make you feel worse."
     n "{cps=30}If I ever see you again, you will wish I shot you today."
-    '{cps=30}One of your men asks "Are you sure boss? You’re really going to forgive him after what he did?"'
+    dan "{cps=30} Are you sure boss? You’re really going to forgive him after what he did?"
     n "{cps=30}No, but I won't become like him, it’s not what Albert would have wanted."
     "{cps=30}He gives you a small nod, and you all walk away."
 
     $ ending = 2
     jump credits
-    return
 
 label ending_scene_2:
 
@@ -58,7 +55,7 @@ label ending_scene_2:
     hide screen stats
     if ghosts:
         show frank at right
-    "{cps=35}[boss] asks you to meet him at the Bendix diner, you see him sitting alone with a cup of coffee."
+    "{cps=35}You find [boss] at the Bendix diner, he is sitting alone with a cup of coffee."
 
     menu:
         "Kill [boss]":
@@ -91,25 +88,22 @@ label ending_3:
     play music "ending_music.mp3"
     "{cps=30}You shake [other_boss]'s hand, and tell him you will let it go."
     "{cps=30}You walk back to your men, stand beside them and whisper"
-    n "{b}{size=+5}Kill them"
+    n "{size=+5}Kill them." with dissolve
     #shooting sounds
     "{cps=30}You and your men start shooting, the other gang is caught by surprise and has no time to react, it’s a massacre."
-    "{cps=30}You stand in the dark parking lot, shaking.
-    There are bodies all around you."
-    "{cps=30}Blood is dripping down your face, but it is not your blood."
+    "{cps=30}You stand in the dark parking lot, shaking. There are bodies all around you."
+    #"{cps=30}Blood is dripping down your face, but it is not your blood."
     "{cps=30}You finally got revenge."
     "{size=+5}Was it worth it?" with Dissolve(1.0)
 
     $ ending = 3
     jump credits
-    return
 
 label ending_4:
 
     play music "ending_music.mp3"
     $ ending = 4
     jump credits
-    return
 
 label ending_5:
     play music "ending_music.mp3"
@@ -124,7 +118,7 @@ label ending_5:
     scene bg dinerParking
     "{cps=35}As soon as you leave the diner, they handcuff you and put you in the police car."
     "The driver looks back at you and says"
-    driver "{cps=30}That's fucked up, shooting a man in front of all those people, how does anyone do something like that?"
+    driver "{cps=30}That's fucked up, shooting a man in front of all those people... how does anyone do something like that?"
     n "{cps=3}I....{nw}"
     n "{cps=20}I though he deserved it."
     n "{size=+5}I lost control." with Dissolve(1.0)

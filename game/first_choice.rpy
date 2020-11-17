@@ -39,7 +39,7 @@ label chose_fight:
 
     scene bg house
     stop sound
-    "{cps=35}You get to Albert's house and go to the phone to call for help,\n
+    "{cps=35}You get to Albert's house and go to the phone to call for help,
     Albert is staring out of the window, he is terrified"
     #louder gunshot
     play sound "gunshot.mp3"

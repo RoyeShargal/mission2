@@ -61,15 +61,7 @@ label first_mission:
             play sound "fastWalking.wav"
             "{cps=2}{color=#000000}.....{/color}{nw}"
             stop sound
-            #scene bg motel
-            $ fame += 50
             jump first_guy
-
-
-       # "Steal the truck":
-        #    "You steal the truck"
-
-#jump second_mission
 
 label dead:
     return

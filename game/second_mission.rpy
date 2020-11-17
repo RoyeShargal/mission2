@@ -28,8 +28,7 @@ label second_mission:
 
     menu:
         "Ok, give me the details":
-            q "{cps=30}He will be in the local cafe tomorrow at 19:00, \n look for the guy with the white striped shirt"
-            n "{cps=30}No problem."
+            q "{cps=30}He will be in the local cafe tomorrow at 19:00,\nlook for the guy with the white striped shirt."
             scene bg black
             centered "{size=+50}{color=#ffffff}The next day"
             jump chose_kill
@@ -41,7 +40,7 @@ label second_mission:
             jason "{cps=30}I'm Jason, nice to meet you.\n I had to make sure you are not some ruthless killer."
             jason "{cps=30}I have been fighting the [gang] for months. I could help you beat them."
             $ Jason = True
-            n "{cps=35}Good, I was looking for another partner"
+            n "{cps=35}Good, I was looking for another partner."
             "Jason joined your gang." with dissolve
             #jump after misson 2
 
@@ -67,7 +66,7 @@ label chose_kill:
             jason "{cps=35}What happened man?"
             n "{cps=35}I couldn't do it."
             jason "{cps=35}Then why the hell are you in this business anyway?"
-            n "{cps=35}The [gang] killed my friend, I can't just let them get away with it"
+            n "{cps=35}The [gang] killed my friend, I can't let them get away with it"
             jason "{cps=35}I respect that, I hate those sons of bitches too, if you wont get your hands dirty, this might help."
             "Earned tranquilizer gun" with dissolve
 
