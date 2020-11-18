@@ -10,7 +10,7 @@ label third_mission:
     #play sound "horror.wav"
     $ renpy.pause(1.0)
     scene black_car
-    n "{cps=30}I think I saw a car, a black one, wandering by the street, \n for a bit too long.{w=2}"
+    n "{cps=30}I think I saw a car, a black one, wandering by the street,\nfor a bit too long."
     n  "Someone is definitely spying on me"
 
     #menu:
@@ -44,7 +44,8 @@ label third_mission:
             jump chose_kidnap
             #jump after misson 2
 label chose_gps:
-    n"{cps=20}The tracker has been successfully planted{w=1}"
+    #maybe change
+    n"{cps=20}The tracker has been successfully planted"
     n"{cps=20}Good Job."
     "+1,500$" with dissolve
     $ money+=1500
@@ -55,20 +56,20 @@ label chose_kidnap:
     spy "{cps=20}I am prepared to be tortured, no information will be getting out of my mouth, FUCKER."
     menu:
         "Kill":
-            n"{cps=10}Alright then, \n Up you go."
+            n"{cps=10}Alright then,\nUp you go."
             play sound "gunshot.mp3"
-            n"{cps=20}Mission failed,\n -5 Fame."
+            n"{cps=20}Mission failed,\n-5 Fame."
             $ fame -=5
 
         "Interrogate":
-            n"{cps=20}Lets play a small game. \n Pick a Number from 1-6, {w=1} \n I am serious."
+            n"{cps=20}Lets play a small game.\nPick a Number from 1-6,\nI am serious."
             $ num = renpy.input("","",allow="123456")
             if  num>=3:
-                n"{cps=10}Seems like your lucky day lad. \n {w=1} Wait for my call, \n We will be in touch when I need you."
+                n"{cps=10}Seems like your lucky day lad.\nWait for my call,\nWe will be in touch when I need you."
                 $ fame+=10
                 "+10 Fame" with dissolve
             else:
-                n"{cps=10}Not today, \n Sorry."
+                n"{cps=10}Not today,\nSorry."
                 play sound "gunshot.mp3"
             jump final_fight
 

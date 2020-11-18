@@ -26,7 +26,7 @@ label start:
     a "{cps=30}No one can escape them, I don’t know what to do, please help me."
 
     menu:
-        "What do you do?"
+        "What's your plan?"
 
         "Offer to work for the devils for protection.":
             $ devils = True

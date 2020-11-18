@@ -1,5 +1,4 @@
 label first_mission:
-    #TODO: fix title screen
     scene bg black
     centered "{font=ARMY RUST.ttf}{size=+100}{color=#912119}The Revenge" with Dissolve(1.0)
 
@@ -14,10 +13,6 @@ label first_mission:
         $ boss = f
         $ other_boss = j
 
-    #Ending tests
-    #if chose_fight:
-        #jump ending_scene_2
-    #jump ending_scene_1
     scene bg motel
 
     n "{cps=40}Where is my gun?? I am going kill them!"

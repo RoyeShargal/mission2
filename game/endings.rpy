@@ -27,6 +27,7 @@ label ending_1:
         hide frank with kill
     #else:
         #hide julian with kill
+    stop music
     "You close your eyes and pull the trigger, everything is silent
     but the sound of the shot and [boss]'s body falling to the ground." with Dissolve(0.5)
     play music "ending_music.mp3" fadein 2.0
@@ -40,6 +41,7 @@ label ending_1:
 
 label ending_2:
 
+    stop music
     play music "ending_music.mp3" fadein 2.0
     "{cps=30}You look into [boss]'s eyes, his face is filled with tears."
     "{cps=30}You close your eyes for a moment, and holster your gun. "
@@ -92,6 +94,7 @@ label ending_scene_3:
             jump ending_4
 
 label ending_3:
+    stop music
     play music "ending_music.mp3"
     "{cps=30}You shake [other_boss]'s hand, and tell him you will let it go."
     "{cps=30}You walk back to your men, stand beside them and whisper:"
@@ -111,7 +114,7 @@ label ending_3:
     jump credits
 
 label ending_4:
-
+    stop music
     play music "ending_music.mp3"
     "{cps=30}You shake [other_boss]'s hand, and tell him you will let it go."
     "{cps=30}Both sides are still pointing weapons at each other, when several police cars arrive."

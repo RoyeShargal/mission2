@@ -23,7 +23,7 @@ label final_fight:
         show jason
         jason "I got this"
         #maybe change
-        "Jason sneaks up on the bodyguard, and chokes him"
+        "Jason sneaks up on the bodyguard and chokes him"
     else:
         "You bribe the bodyguard"
     if chose_fight:

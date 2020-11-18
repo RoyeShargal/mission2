@@ -1,8 +1,7 @@
 label chose_devils:
 
     scene bg devils
-    #maybe campfire sound
-
+    a "That's Julian, their boss."
     #show julian and Albert
     j "{cps=30}Albert! where is my money? Did you really think you could steal from me and live?"
     a "{cps=4}...{nw}"
@@ -18,9 +17,8 @@ label chose_devils:
 label chose_ghosts:
 
     scene bg ghosts
-    #maybe cricket and nature sounds
-
     #show Frank and Albert
+    a "That's Frank, their boss."
     show frank at right
     "{cps=30}Three men come out of the woods and surround you."
     a "{cps=30}I'm sorry I stole from you, what can I do to make it right?"

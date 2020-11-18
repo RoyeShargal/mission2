@@ -41,15 +41,5 @@ define blue = Fade(0.2, 0.0, 0.2, color="#5e9cff")
 define red = Fade(0.2, 0.0, 0.2, color="#ff2445")
 
 #Stats
-define health = 2
 define money = 0
-define attack = 1
-define defence = 1
 define ending = 1
-
-define honor = 20 #Invisible, every bad action reduces honor and good ones increase it
-                    #Can tell the player how he played at the end.
-
-define fame = 0 #can increase as you do missions, to explain how people have heard about you
-
-define endings_discovered = 0 #If there is a way to save stats between games(shown after ending)
