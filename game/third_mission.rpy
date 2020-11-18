@@ -7,7 +7,7 @@ label third_mission:
     #centered "{size=+50}{color=#ffffff}MISSION #3"
     #centered "{size=+50}{color=#ffffff}The Spy."
     #scene spied_car_pic
-    play sound "horror.wav"
+    #play sound "horror.wav"
     $ renpy.pause(1.0)
     scene black_car
     n "{cps=30}I think I saw a car, a black one, wandering by the street, \n for a bit too long.{w=2}"
@@ -30,11 +30,11 @@ label third_mission:
             n "{cps=30}The car is the black SKODA, the windows are shadowed."
             n "{cps=30}This is your moment, all you have been practicing for, you got this."
 
-            dan "{cps=25}Rumors say that when putting a gps tracker, there are 50 precent of peing your pants, becareful."
+            lana "{cps=25}Rumors say that when putting a gps tracker, there are 50 precent of peing your pants, becareful."
             jump chose_gps
 
         "Kidnap the spy":
-            dan "{cps=30}Once the deed is done, there will be no regrets."
+            lana "{cps=30}Once the deed is done, there will be no regrets."
             n "{cps=30}Regrets are not what we're here for, huh?"
             show spy
             spy "{cps=30}Am i dreaming, or noises are being heared?"
@@ -70,6 +70,7 @@ label chose_kidnap:
             else:
                 n"{cps=10}Not today, \n Sorry."
                 play sound "gunshot.mp3"
+            jump final_fight
 
 
         #END

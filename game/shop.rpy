@@ -1,7 +1,7 @@
 label shopexp:
-    "You are ready to fight [boss], and heard a rumour about a black market that illegal weapons."
+    "You are ready to fight [boss], and heard a rumour about a black market that sells illegal weapons."
     "You follow the lead and arrive at a dark house, you knock on the door, it opens and a dark figure leads you inside."
-    "Welcome, everything here is for sale, do not try to steal and keep this place a secret."
+    q "Welcome, everything here is for sale, do not try to steal and keep this place a secret."
     scene darkdoor with blackFlash
     show q
 
@@ -23,8 +23,6 @@ label shop:
     #7. silencer
     #8. enlist the shopkeeper's help in the final fight
 
-
-
     menu:
         "buy item 1":
             if money >= 10000:
@@ -41,6 +39,7 @@ label shop:
             else:
                 "You don't have enough money"
                 jump shop
+
         "buy item 3":
             if money >= 5000:
                 #get the item
@@ -48,5 +47,6 @@ label shop:
             else:
                 "You don't have enough money"
                 jump shop
+
         "finish shopping":
             jump final_fight

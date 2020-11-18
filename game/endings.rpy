@@ -8,13 +8,12 @@ label ending_scene_1:
         show frank
     hide screen stats
 
-    "{cps=40}You and your men surround [boss], he looks at you in distress."
+    "{cps=40}He looks at you in distress."
     boss "{cps=40}Albert knew what would happen if he stole from me, he brought it on himself, all I did was pull the trigger."
-    "{cps=40}You pull out your gun and point it at his head. [boss] falls to his knees and begs."
+    "{cps=40}You pull out your gun and point it at his head. [boss] starts to beg"
     boss "{cps=40}Killing me won’t bring your friend back, it will only make you as bad as me."
 
     menu:
-
         "Kill [boss]":
             jump ending_1
 
@@ -46,7 +45,7 @@ label ending_2:
     "{cps=30}You close your eyes for a moment, and holster your gun. "
     "{cps=30}Maybe he deserves death, but killing him won’t bring Albert back, it will only make you feel worse."
     n "{cps=30}If I ever see you again, you will wish I shot you today."
-    dan "{cps=30} Are you sure boss? You’re really going to forgive him after what he did?"
+    lana "{cps=30} Are you sure boss? You’re really going to forgive him after what he did?"
     n "{cps=30}No, but I won't become like him, it’s not what Albert would have wanted."
     "{cps=30}He gives you a small nod, and you all walk away."
 
@@ -97,7 +96,7 @@ label ending_3:
     "{cps=30}You shake [other_boss]'s hand, and tell him you will let it go."
     "{cps=30}You walk back to your men, stand beside them and whisper:"
     n "{size=+5}Kill them." with dissolve
-    #shooting sounds
+    play sound "shooting.mp3"
     if devils:
         hide frank with kill
     #else:

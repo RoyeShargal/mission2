@@ -1,6 +1,6 @@
 define jason = Character("Jason", color="#b021ae", what_color="#b021ae",image = "jason")
 define q = Character("????", color="#b021ae", what_color="#b021ae", image = "q")
-default isJason = False
+default Jason = False
 
 define blackFlash = Fade(0.1, 0.0, 2, color="#000000")
 
@@ -10,7 +10,7 @@ label second_mission:
     scene bg motel
     play sound "knockknock.wav"
     $ renpy.pause(1.0)
-    n "{cps=40}Who is this???{w=1}"
+    n "{cps=40}Who is this???"
 
     scene darkdoor with blackFlash
     show q
@@ -52,7 +52,7 @@ label chose_kill:
         n "This is nerveracking"
 
         "Pull the trigger":
-            n "{cps=35}Ok I can do this.{w=2}"
+            n "{cps=35}Ok I can do this."
             play sound "gunshot.mp3"
             scene bg black with kill
             scene bg motel
@@ -68,8 +68,8 @@ label chose_kill:
             n "{cps=35}I couldn't do it."
             jason "{cps=35}Then why the hell are you in this business anyway?"
             n "{cps=35}The [gang] killed my friend, I can't let them get away with it."
-            jason "{cps=35}I respect that, I hate those sons of bitches too, if you wont get your hands dirty, this might help."
-            "Earned tranquilizer gun" with dissolve
+            jason "{cps=35}I respect that, I hate those sons of bitches too, I can help you fight them."
+            "Jason joined your gang." with dissolve
 
         #jump after misson 2
     jump third_mission

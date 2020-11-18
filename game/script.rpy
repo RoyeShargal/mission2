@@ -7,7 +7,8 @@
 label start:
     $ name = renpy.input("Enter your name to start", "", length=20)
     scene bg black
-    play sound "rain.mp3" fadein 2.0 fadeout 20.0
+    play music "bg music.mp3"
+    #play sound "rain.mp3" fadein 2.0 fadeout 20.0
 
     a "{cps=30}%(name)s! Wake up!"
     scene bg room

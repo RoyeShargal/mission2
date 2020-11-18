@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/second_mission.rpy", line 75: expected menuitem
-    jump third_mission
-    ^
+File "game/endings.rpy", line 84: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+         we will let you go if you will not come after us."
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Nov 17 23:01:28 2020
+Wed Nov 18 21:22:07 2020

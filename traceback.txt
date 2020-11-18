@@ -1,26 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/definitions.rpy", line 26, in script
-    image albert = im.Scale("Albert.png")
-  File "game/definitions.rpy", line 26, in <module>
-    image albert = im.Scale("Albert.png")
-TypeError: __init__() takes at least 4 arguments (2 given)
+  File "game/third_mission.rpy", line 33, in script
+    dan "{cps=25}Rumors say that when putting a gps tracker, there are 50 precent of peing your pants, becareful."
+Exception: Sayer 'dan' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/definitions.rpy", line 26, in script
-    image albert = im.Scale("Albert.png")
-  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\ast.py", line 1013, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/definitions.rpy", line 26, in <module>
-    image albert = im.Scale("Albert.png")
-TypeError: __init__() takes at least 4 arguments (2 given)
+  File "game/third_mission.rpy", line 33, in script
+    dan "{cps=25}Rumors say that when putting a gps tracker, there are 50 precent of peing your pants, becareful."
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\ast.py", line 678, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\ast.py", line 576, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
+Exception: Sayer 'dan' is not defined.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  1.0
-Wed Nov 18 10:17:43 2020
+Wed Nov 18 21:35:04 2020

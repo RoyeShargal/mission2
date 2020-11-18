@@ -19,7 +19,6 @@ label first_mission:
         #jump ending_scene_2
     #jump ending_scene_1
     scene bg motel
-    show screen stats
 
     n "{cps=40}Where is my gun?? I am going kill them!"
     #n "{cps=40}There it is! I'll show them"
@@ -42,10 +41,10 @@ label first_mission:
                 scene bg devils
             else:
                 scene bg ghosts
-                boss "{cps=45}Oh look, its the thief's little friend."
-                boss "{cps=40}That's sweet."
-                n "{cps=25}Your time is up!"
-                boss "{cps=40}HE'S ARMED! STOP HIM!!"
+            boss "{cps=45}Oh look, its the thief's little friend."
+            boss "{cps=40}That's sweet."
+            n "{cps=25}Your time is up!"
+            boss "{cps=40}HE'S ARMED! STOP HIM!!"
 
             scene bg black with kill
             play sound "gunshot.mp3"
