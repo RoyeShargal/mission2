@@ -23,7 +23,7 @@ label second_mission:
         "No, go Away":
             q "{cps=30}I KNOW ITS YOU! cut the bullshit!"
 
-    q "{cps=30}I heard about what you did to the [gang] bomb supply and wanted to offer you a job."
+    q "{cps=30}I heard about what you did to the [gang] and wanted to offer you a job."
     q "{cps=30}I will give you $10,000 to assassinate German Joe, what do you say?"
 
     menu:
@@ -67,7 +67,7 @@ label chose_kill:
             jason "{cps=35}What happened man?"
             n "{cps=35}I couldn't do it."
             jason "{cps=35}Then why the hell are you in this business anyway?"
-            n "{cps=35}The [gang] killed my friend, I can't let them get away with it"
+            n "{cps=35}The [gang] killed my friend, I can't let them get away with it."
             jason "{cps=35}I respect that, I hate those sons of bitches too, if you wont get your hands dirty, this might help."
             "Earned tranquilizer gun" with dissolve
 

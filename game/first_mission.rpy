@@ -22,7 +22,7 @@ label first_mission:
     show screen stats
 
     n "{cps=40}Where is my gun?? I am going kill them!"
-    n "{cps=40}There it is! I'll show them"
+    #n "{cps=40}There it is! I'll show them"
     scene bg black
     play sound "fastWalking.wav"
     "{cps=2}{color=#000000}.....{/color}{nw}"
@@ -34,15 +34,15 @@ label first_mission:
     n "{cps=30}Maybe I can hurt them without risking my life."
 
     menu:
-        "What do you do"
+        "What do you do?"
 
         "Try to kill [boss]":
-            n "{cps=30}Thats it! I'm going to end it"
+            n "{cps=30}Thats it! I'm going to end it!"
             if devils:
                 scene bg devils
             else:
                 scene bg ghosts
-                boss "{cps=45}Oh look, its the thief's little friend"
+                boss "{cps=45}Oh look, its the thief's little friend."
                 boss "{cps=40}That's sweet."
                 n "{cps=25}Your time is up!"
                 boss "{cps=40}HE'S ARMED! STOP HIM!!"

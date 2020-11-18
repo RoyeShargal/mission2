@@ -8,7 +8,7 @@ label ending_scene_1:
         show frank
     hide screen stats
 
-    "{cps=40}You and your men surround [boss], he looks at you in distress"
+    "{cps=40}You and your men surround [boss], he looks at you in distress."
     boss "{cps=40}Albert knew what would happen if he stole from me, he brought it on himself, all I did was pull the trigger."
     "{cps=40}You pull out your gun and point it at his head. [boss] falls to his knees and begs."
     boss "{cps=40}Killing me won’t bring your friend back, it will only make you as bad as me."
@@ -68,7 +68,7 @@ label ending_scene_2:
             jump ending_5
 
         "Listen to what [boss] has to say":
-            "{cps=35}You and your men sit in front of the boss"
+            "{cps=35}You and your men sit in front of the boss."
 
 label ending_scene_3:
 
@@ -95,7 +95,7 @@ label ending_scene_3:
 label ending_3:
     play music "ending_music.mp3"
     "{cps=30}You shake [other_boss]'s hand, and tell him you will let it go."
-    "{cps=30}You walk back to your men, stand beside them and whisper"
+    "{cps=30}You walk back to your men, stand beside them and whisper:"
     n "{size=+5}Kill them." with dissolve
     #shooting sounds
     if devils:
@@ -115,21 +115,21 @@ label ending_4:
 
     play music "ending_music.mp3"
     "{cps=30}You shake [other_boss]'s hand, and tell him you will let it go."
-    "{cps=30}Both sides are still pointing weapons at each other, when several police cars arrive"
+    "{cps=30}Both sides are still pointing weapons at each other, when several police cars arrive."
     police "{cps=30}This is the police! put down your weapons!"
     menu:
         "Give in":
             jump ending_6
         "Run":
             n "RUN!!"
-    "{cps=30}You run away, but the [other_gang} starts shooting at the police"
+    "{cps=30}You run away, but the [other_gang} starts shooting at the police."
     "{cps=30}You hide behind a trash can and see Jeremy running towards you."
     play sound "gunshot.mp3"
-    "{cps=30}He gets shot in his chest, two policemen handcuff him and put him in the car" with flash
+    "{cps=30}He gets shot in his chest, two policemen handcuff him and put him in the car." with flash
     "{cps=30}There is nothing you can do to help him, you run and stop when you get to the woods, tears fill your eyes."
     n "{cps=30}This is all my fault."
     n "{cps=30}I should have never gotten him into this."
-    n "{size=+5}I'm sorry" with Dissolve(1.0)
+    n "{size=+5}I'm sorry." with Dissolve(1.0)
     $ ending = 4
     jump credits
 
@@ -139,11 +139,11 @@ label ending_6:
         hide frank with kill
     #else:
         #hide julian with kill
-    "[other_boss] tries to run away and gets shot multiple times" with dissolve
-    "{cps=30}The police take everyone into seperate police cars"
+    "[other_boss] tries to run away and gets shot multiple times." with dissolve
+    "{cps=30}The police take everyone into seperate police cars."
     n "{cps=30}Am I going to jail?"
     driver "{cps=30}Well, that depends on whether your men will talk."
-    n "{cps=30}They won't"
+    n "{cps=30}They won't."
     driver "{cps=30}I have been doing this job for a very long time."
     driver "I wouldn't be so sure" with Dissolve(1.0)
 
@@ -155,10 +155,10 @@ label ending_5:
     play sound "gunshot.mp3"
     "You pull out your gun and shoot [boss] in his chest" with flash
     "{cps=35}Everyone in the diner starts screaming, they are all scared of you."
-    "{cps=35}Red and blue lights flash through the window"
+    "{cps=35}Red and blue lights flash through the window."
     "{cps=35}You look down at [boss] lying on the ground, he says softly as he struggles to breath"
     boss "{cps=35}I didn't kill Albert, it was [other_boss]."
-    boss "{cps=35}You killed me for nothing, you are just as bad as him"
+    boss "{cps=35}You killed me for nothing, you are just as bad as him."
     police "{cps=35}This is the police! get out with your hands on your head!"
     scene bg dinerParking
     if devils:
