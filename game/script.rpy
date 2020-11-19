@@ -13,12 +13,12 @@ label start:
     a "{cps=30}%(name)s! Wake up!"
     scene bg room
     #will change background to transperent today
-    show albert
+    show albert with dissolve
     a "{cps=35}I'm in trouble, I need you to come with me to raven forest."
 
     scene bg forest
 
-    #show Albert
+    #show Albert with dissolve
     a "{cps=35}I fucked up %(name)s, my brother lost everything gambling and took out a huge loan."
     a "{cps=35}I accepted a job and stole guns from the gangs operating here so I can help pay the money back, but they found out."
     "{cps=35}You heard about those gangs, there are the devils, led by Julian, known for their ruthlessness and lack of honor." with flash

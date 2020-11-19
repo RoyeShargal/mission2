@@ -10,7 +10,7 @@ label third_mission:
     #play sound "horror.wav"
     $ renpy.pause(1.0)
     scene black_car
-    n "{cps=35}I think I saw a car, a black one, wandering by the street,\nfor a bit too long."
+    n "{cps=35}I think I saw a car, a black one, wandering by the street for a bit too long."
     n  "{cps=35}Someone is definitely spying on me."
 
     #menu:
@@ -31,7 +31,7 @@ label third_mission:
             "{cps=35}This is your moment, all you have been practicing for, you got this."
 
             #lana "{cps=35}Rumors say that when putting a gps tracker, there are 50 percent of peing your pants, be careful."
-            lana "{cps=35}Be careful, he could be dangerous."
+            lana "{cps=35}Be careful, whoever is inside could be dangerous."
             jump chose_gps
 
         "Kidnap the spy":
@@ -46,8 +46,8 @@ label third_mission:
 
 label chose_gps:
     "{cps=35}You successfully planted the tracker."
-    "{cps=35}After a few hours of waiting, the spy drives away, he stops when he gets to the [gang] territory"
-    n "{size=+5}They know we are coming after them." with dissolve
+    "{cps=35}After a few hours of waiting, the spy drives away, he stops when he gets to the [gang] territory."
+    n "{cps=35}They know we are coming after them, we have to act now."
     jump final_fight
 
 label chose_kidnap:

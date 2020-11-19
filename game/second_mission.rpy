@@ -11,6 +11,7 @@ label second_mission:
     $ renpy.pause(1.0)
     n "{cps=35}Who is this???"
 
+    "{cps=35}The lights turn off"
     scene darkdoor with blackFlash
     show q
     q "{cps=35}Are you %(name)s?"
@@ -68,7 +69,9 @@ label chose_kill:
             jason "{cps=35}Then why the hell are you in this business anyway?"
             n "{cps=35}The [gang] killed my friend, I can't just let them get away with it."
             jason "{cps=35}I respect that, I hate those sons of bitches too, if you ever need backup, let me know."
-            Jason = True
+            $ Jason = True
             "Jason joined your gang." with dissolve
 
+    scene bg black
+    centered "{size=+50}{color=#ffffff}The day after" with dissolve
     jump third_mission

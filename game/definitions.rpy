@@ -27,6 +27,8 @@ image frank = im.Scale("frank.png",1500, 833, bilinear=True)
 image firstGuy = im.Scale("first_guy.png",805, 1209, bilinear=True)
 image albert = im.Scale("Albert.png", 811, 1112, bilinear=True)
 image lana = im.Scale("lana.png", 300, 798, bilinear=True)
+image q = im.Scale("q.png", 230, 813, bilinear=True)
+image jason = im.Scale("jason.png", 230, 813, bilinear=True)
 image bg black = "#000"
 
 #Booleans

@@ -65,7 +65,7 @@ label ending_scene_2:
     "{cps=35}You find [boss] at the Bendix diner, he is sitting alone with a cup of coffee."
 
     menu:
-        "Kill [boss]":
+        "Kill [boss] while you have the chance":
             jump ending_5
 
         "Listen to what [boss] has to say":
