@@ -55,20 +55,22 @@ label chose_kill:
             #louder gunshot
             play sound "gunshot.mp3"
             scene bg black with kill
-            scene bg motel
-            show jason
-            jason "{cps=35}I knew I could count on you."
+            scene darkdoor
+            show q
+            q "{cps=35}I knew I could count on you."
             $ money += 10000
             "Money increased by $10000" with dissolve
 
         "I can't do this":
-            scene bg motel
-            show jason
-            jason "{cps=35}What happened man?"
+            scene darkdoor
+            show q
+            q "{cps=35}What happened man?"
             n "{cps=35}I couldn't do it."
-            jason "{cps=35}Then why the hell are you in this business anyway?"
+            q "{cps=35}Then why the hell are you in this business anyway?"
             n "{cps=35}The [gang] killed my friend, I can't just let them get away with it."
-            jason "{cps=35}I respect that, I hate those sons of bitches too, if you ever need backup, let me know."
+            hide q
+            show jason
+            jason "{cps=35}I respect that, I'm Jason by the way, I hate those sons of bitches too, if you ever need backup, let me know."
             $ Jason = True
             "Jason joined your gang." with dissolve
 
