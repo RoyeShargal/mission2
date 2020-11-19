@@ -1,10 +1,4 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-
-label start:
+﻿label start:
     $ name = renpy.input("Enter your name to start", "", length=20)
     scene bg black
     play music "bg music.mp3"
@@ -28,6 +22,10 @@ label start:
     menu:
         "What's your plan?"
 
+        "Prepare to fight for your friend’s life.":
+            $ chose_fight = True
+            jump chose_fight
+
         "Offer to work for the Devils for protection.":
             $ devils = True
             jump chose_devils
@@ -35,9 +33,3 @@ label start:
         "Offer to work for the Ghosts for protection.":
             $ ghosts = True
             jump chose_ghosts
-
-        "Prepare to fight for your friend’s life.":
-            $ chose_fight = True
-            jump chose_fight
-
-    return

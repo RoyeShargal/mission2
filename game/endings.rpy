@@ -1,3 +1,7 @@
+transform middle_left:
+    xalign 0.15
+    yalign 1.0
+
 label ending_scene_1:
 
     if devils:
@@ -81,6 +85,9 @@ label ending_scene_3:
         show frank
     #else:
         #show julian
+    if jason:
+        show jason at left
+    show lana at middle_left
     "{cps=35}You and your men pull out your guns and go outside, [other_boss] faces you."
     other_boss "{cps=35}I killed Albert because he deserved it. You are outnumbered,
      we will let you go if you will not come after us."
@@ -127,7 +134,9 @@ label ending_4:
     "{cps=35}You run away, but the [other_gang] starts shooting at the police."
     "{cps=35}You hide behind a trash can and see Lana running towards you."
     play sound "gunshot.mp3"
+    hide lana with dissolve
     "{cps=35}She gets shot in his chest, two policemen handcuff her and put her in the car." with flash
+    scene bg forest
     "{cps=35}There is nothing you can do to help her, you run and stop when you get to the woods, tears fill your eyes."
     n "{cps=35}This is all my fault."
     n "{cps=35}I should have never gotten her into this."

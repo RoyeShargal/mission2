@@ -1,5 +1,5 @@
-define jason = Character("Jason", color="#b021ae", what_color="#b021ae",image = "jason")
-define q = Character("????", color="#b021ae", what_color="#b021ae", image = "q")
+define jason = Character("Jason", color="#b021ae", what_color="#b021ae",image = "jason", what_prefix = '"', what_suffix = '"')
+define q = Character("????", color="#b021ae", what_color="#b021ae", image = "q", what_prefix = '"', what_suffix = '"')
 default Jason = False
 define blackFlash = Fade(0.1, 0.0, 2, color="#000000")
 
@@ -52,8 +52,7 @@ label chose_kill:
 
         "Pull the trigger":
             n "{cps=35}Ok I can do this."
-            #louder gunshot
-            play sound "gunshot.mp3"
+            play sound "sniperre.mp3"
             scene bg black with kill
             scene darkdoor
             show q

@@ -36,8 +36,7 @@ label chose_fight:
     scene bg house
     "{cps=35}You get to Albert's house and go to the phone to call for help,
     Albert is staring out of the window, he is terrified."
-    #louder gunshot
-    play sound "gunshot.mp3"
+    play sound "sniper.mp3"
     #hide albert with kill
     "You hear a loud gunshot, see the window breaking and Albert falling to the ground." with kill
     "{cps=35}You run to Albert, but he is already dead."

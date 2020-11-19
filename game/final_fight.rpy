@@ -1,9 +1,13 @@
+transform middle_right:
+    xalign 0.85
+    yalign 1.0
+
 label final_fight:
     scene bg motel
     play sound "knockknock.wav"
     show screen stats
     $ renpy.pause(1.0)
-    show lana
+    show lana with dissolve
     #reason for them leaving
     lana "{cps=35}%(name)s, I just set the [gang] drug supply on fire, they are all looking for me.
     They only left one bodyguard to protect [boss]."
@@ -14,7 +18,7 @@ label final_fight:
         "Go after [boss]":
             jump confrontation
 
-        "Lock the door and prepare for the [gang] to arrive":
+        "Stay and defend yourself when the [gang] arrive":
             "{cps=35}You and Lana take turns watching the window while the other rests"
             "{cps=35}It's 4 in the morning, when you see five armed men walking to the door."
             n "{cps=20}LANA! RUN!"
@@ -48,20 +52,58 @@ label confrontation:
     "{cps=35}You see the bodyguard, and [boss]'s cabin behind it"
     if Jason:
         show jason at left with dissolve
-        n "{cps=35}Jason, can you neutralize that guard?"
+        menu:
+            "Ask Jason to neutralize the guard":
+                n "{cps=35}Jason, can you neutralize that guard?"
+                jump neutralize
+
+            "Ask Jason to kill the guard":
+                n "{cps=35}Jason, can you kill that guard?"
+                jason "{cps=35}I'm not getting my hands dirty for you, do it yourself"
+                menu:
+                    "Kill the guard yourself":
+                        play sound "gunshot.mp3"
+                        hide bodyguard with kill
+                        "You sneak up on the guard and shoot him from behind. You feel sick, you can't recognize yourself anymore." with dissolve
+                        n "{cps=35}It had to be done"
+                        jason "{cps=20}Did it?"
+                        "{cps=35}the path to [boss] is clear."
+                        jump after_guard
+
+                    "Let Jason handle it":
+                        n "{cps=35}Okay Jason, let's try things your way"
+
+    else:
+        menu:
+            "Bribe the guard":
+                "{cps=35}You walk up to the guard, and offer him 10000$ to look the other way."
+                bodyguard "{cps=35}Deal, I never saw you"
+                hide bodyguard with dissolve
+                "{cps=35}the path to [boss] is clear."
+
+            "Kill the guard":
+                play sound "gunshot.mp3"
+                hide bodyguard with kill
+                "You sneak up on the guard and shoot him from behind. You feel sick, you can't recognize yourself anymore." with dissolve
+                n "{cps=35}It had to be done"
+                lana "{cps=20}Did it?"
+                "{cps=35}the path to [boss] is clear."
+
+label neutralize:
+
         jason "{cps=35}I got this"
         #maybe change
-        "{cps=35}Jason sneaks up behind the bodyguard and chokes him unconcious.\n
-        The path is clear."
+        hide jason with dissolve
+        show jason at middle_right with dissolve
+        "{cps=35}Jason sneaks up on the bodyguard and chokes him unconcious, the path to [boss] is clear."
         hide bodyguard with dissolve
         hide jason with dissolve
-    else:
-        "{cps=35}You walk up to the guard, and offer him 10000$ to look the other way."
-        bodyguard "{cps=35}Deal, I never saw you"
-        hide bodyguard with dissolve
+
+label after_guard:
+    scene bg cabin
     if chose_fight:
-        "{cps=35}You open the cabin door.\nThere is no one inside, but the phone on the wall is ringing..."
-        #maybe ringing sound
+        play sound "phone.mp3"
+        "{cps=35}You open the cabin door. There is no one inside, but the phone on the wall is ringing..."
         boss "{cps=35}Did you think it would be that easy? Meet me at the Bendix Diner tommorow at 8pm, we need to talk."
     else:
         if ghosts:

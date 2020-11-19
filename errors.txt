@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/second_mission.rpy", line 71: expected statement.
-    Jason = True
-          ^
+File "game/final_fight.rpy", line 86: indentation mismatch.
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Nov 19 13:24:59 2020
+Thu Nov 19 23:20:03 2020
