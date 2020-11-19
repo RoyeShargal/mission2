@@ -35,6 +35,7 @@ label final_fight:
             with kill
             scene bg black
             centered "{font=ARMY RUST.ttf}{size=+100}{color=#F72C00}{cps=20}You died" with Dissolve(1.0)
+            jump dead
 
 
 label confrontation:
@@ -88,6 +89,7 @@ label confrontation:
                 n "{cps=35}It had to be done"
                 lana "{cps=20}Did it?"
                 "{cps=35}the path to [boss] is clear."
+                jump after_guard
 
 label neutralize:
 
