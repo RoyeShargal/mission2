@@ -26,7 +26,7 @@ label third_mission:
     menu:
         n "{cps=35}What should I do?"
 
-        "Put a gps tracker on the vehicle":
+        "Put a GPS tracker on the vehicle":
             "{cps=35}The car is the black SKODA, the windows are shadowed."
             "{cps=35}This is your moment, all you have been practicing for, you got this."
 
@@ -58,6 +58,7 @@ label chose_kidnap:
             n"{cps=20}Alright then, up you go."
             play sound "gunshot.mp3"
             "The spy's body falls to the floor, he won't be spying on you again." with kill
+            jump final_fight
 
         "Interrogate":
             n "{cps=35}Lets play a small game.\nPick a Number from 1-6.\nI am serious."

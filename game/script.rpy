@@ -21,18 +21,18 @@ label start:
     #show Albert with dissolve
     a "{cps=35}I fucked up %(name)s, my brother lost everything gambling and took out a huge loan."
     a "{cps=35}I accepted a job and stole guns from the gangs operating here so I can help pay the money back, but they found out."
-    "{cps=35}You heard about those gangs, there are the devils, led by Julian, known for their ruthlessness and lack of honor." with flash
-    "{cps=35}And the ghosts, led by Frank, they operate in the shadows. If you cross them, your only way out is death."
+    "{cps=35}You heard about those gangs, there are {b}the Devils, led by Julian{/b}, known for their ruthlessness and lack of honor." with flash
+    "{cps=35}And {b}the Ghosts, led by Frank{/b}, they operate in the shadows. If you cross them, your only way out is death."
     a "{cps=35}No one can escape them, I don’t know what to do, please help me."
 
     menu:
         "What's your plan?"
 
-        "Offer to work for the devils for protection.":
+        "Offer to work for the Devils for protection.":
             $ devils = True
             jump chose_devils
 
-        "Offer to work for the ghosts for protection.":
+        "Offer to work for the Ghosts for protection.":
             $ ghosts = True
             jump chose_ghosts
 
