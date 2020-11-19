@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/endings.rpy", line 84: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-         we will let you go if you will not come after us."
+File "game/third_mission.rpy", line 69: could not parse statement.
+    play sound "gunshot.mp3" with kill
+                             ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Nov 18 21:22:07 2020
+Thu Nov 19 03:26:56 2020

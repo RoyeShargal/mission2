@@ -8,10 +8,10 @@ label ending_scene_1:
         show frank
     hide screen stats
 
-    "{cps=40}He looks at you in distress."
-    boss "{cps=40}Albert knew what would happen if he stole from me, he brought it on himself, all I did was pull the trigger."
-    "{cps=40}You pull out your gun and point it at his head. [boss] starts to beg"
-    boss "{cps=40}Killing me won’t bring your friend back, it will only make you as bad as me."
+    "{cps=35}He looks at you in distress."
+    boss "{cps=35}Albert knew what would happen if he stole from me, he brought it on himself, all I did was pull the trigger."
+    "{cps=35}You pull out your gun and point it at his head. [boss] starts to beg"
+    boss "{cps=35}Killing me won’t bring your friend back, it will only make you as bad as me."
 
     menu:
         "Kill [boss]":
@@ -31,8 +31,8 @@ label ending_1:
     "You close your eyes and pull the trigger, everything is silent
     but the sound of the shot and [boss]'s body falling to the ground." with Dissolve(0.5)
     play music "ending_music.mp3" fadein 2.0
-    "{cps=30}You thought you would feel something, but the emptiness you have been feeling since you started this still remains."
-    "{cps=30}Maybe [boss] was right, maybe you did become as bad as him,
+    "{cps=35}You thought you would feel something, but the emptiness you have been feeling since you started this still remains."
+    "{cps=35}Maybe [boss] was right, maybe you did become as bad as him,
      but at least you know he won't do what he did to Albert to anyone else."
     "{size=+5}At least you got your revenge." with Dissolve(1.0)
 
@@ -43,13 +43,13 @@ label ending_2:
 
     stop music
     play music "ending_music.mp3" fadein 2.0
-    "{cps=30}You look into [boss]'s eyes, his face is filled with tears."
-    "{cps=30}You close your eyes for a moment, and holster your gun. "
-    "{cps=30}Maybe he deserves death, but killing him won’t bring Albert back, it will only make you feel worse."
-    n "{cps=30}If I ever see you again, you will wish I shot you today."
-    lana "{cps=30} Are you sure boss? You’re really going to forgive him after what he did?"
-    n "{cps=30}No, but I won't become like him, it’s not what Albert would have wanted."
-    "{cps=30}He gives you a small nod, and you all walk away."
+    "{cps=35}You look into [boss]'s eyes, his face is filled with tears."
+    "{cps=35}You close your eyes for a moment, and holster your gun. "
+    "{cps=35}Maybe he deserves death, but killing him won’t bring Albert back, it will only make you feel worse."
+    n "{cps=35}If I ever see you again, you will wish I shot you today."
+    lana "{cps=35} Are you sure boss? You’re really going to forgive him after what he did?"
+    n "{cps=35}No, but I won't become like him, it’s not what Albert would have wanted."
+    "{cps=35}He gives you a small nod, and you all walk away."
 
     $ ending = 2
     jump credits
@@ -69,13 +69,13 @@ label ending_scene_2:
             jump ending_5
 
         "Listen to what [boss] has to say":
-            "{cps=35}You and your men sit in front of the boss."
+            "{cps=35}You and your men sit in front of [boss]."
 
 label ending_scene_3:
 
     boss "{cps=35}You don’t have to kill me, [other_boss] killed Albert,
     and he is planning on getting to you before you get to him."
-    "{cps=35}You look outside and see the other gang armed and heading to the diner."
+    "{cps=35}You look outside and see the [other_gang] armed and heading to the diner."
     scene bg dinerParking
     if devils:
         show frank
@@ -96,8 +96,8 @@ label ending_scene_3:
 label ending_3:
     stop music
     play music "ending_music.mp3"
-    "{cps=30}You shake [other_boss]'s hand, and tell him you will let it go."
-    "{cps=30}You walk back to your men, stand beside them and whisper:"
+    "{cps=35}You shake [other_boss]'s hand, and tell him you will let it go."
+    "{cps=35}You walk back to your men, stand beside them and whisper:"
     n "{size=+5}Kill them." with dissolve
     play sound "shooting.mp3"
     if devils:
@@ -116,37 +116,37 @@ label ending_3:
 label ending_4:
     stop music
     play music "ending_music.mp3"
-    "{cps=30}You shake [other_boss]'s hand, and tell him you will let it go."
-    "{cps=30}Both sides are still pointing weapons at each other, when several police cars arrive."
-    police "{cps=30}This is the police! put down your weapons!"
+    "{cps=35}You shake [other_boss]'s hand, and tell him you will let it go."
+    "{cps=35}Both sides are still pointing weapons at each other, when several police cars arrive."
+    police "{cps=35}This is the police! put down your weapons!"
     menu:
         "Give in":
             jump ending_6
         "Run":
-            n "RUN!!"
-    "{cps=30}You run away, but the [other_gang} starts shooting at the police."
-    "{cps=30}You hide behind a trash can and see Jeremy running towards you."
+            n "RUN!!" with dissolve
+    "{cps=35}You run away, but the [other_gang] starts shooting at the police."
+    "{cps=35}You hide behind a trash can and see Lana running towards you."
     play sound "gunshot.mp3"
-    "{cps=30}He gets shot in his chest, two policemen handcuff him and put him in the car." with flash
-    "{cps=30}There is nothing you can do to help him, you run and stop when you get to the woods, tears fill your eyes."
-    n "{cps=30}This is all my fault."
-    n "{cps=30}I should have never gotten him into this."
+    "{cps=35}She gets shot in his chest, two policemen handcuff her and put her in the car." with flash
+    "{cps=35}There is nothing you can do to help her, you run and stop when you get to the woods, tears fill your eyes."
+    n "{cps=35}This is all my fault."
+    n "{cps=35}I should have never gotten her into this."
     n "{size=+5}I'm sorry." with Dissolve(1.0)
     $ ending = 4
     jump credits
 
 label ending_6:
-    "{cps=30}You put your hands on your head and fall to your knees."
+    "{cps=35}You put your hands on your head and fall to your knees."
     if devils:
         hide frank with kill
     #else:
         #hide julian with kill
     "[other_boss] tries to run away and gets shot multiple times." with dissolve
-    "{cps=30}The police take everyone into seperate police cars."
-    n "{cps=30}Am I going to jail?"
-    driver "{cps=30}Well, that depends on whether your men will talk."
-    n "{cps=30}They won't."
-    driver "{cps=30}I have been doing this job for a very long time."
+    "{cps=35}The police take everyone into seperate police cars."
+    n "{cps=35}Am I going to jail?"
+    driver "{cps=35}Well, that depends on whether your men will talk."
+    n "{cps=35}They won't."
+    driver "{cps=35}I have been doing this job for a very long time."
     driver "I wouldn't be so sure" with Dissolve(1.0)
 
     $ ending = 6
@@ -169,9 +169,9 @@ label ending_5:
         #hide julian
     "{cps=35}As soon as you leave the diner, they handcuff you and put you in the police car."
     "The driver looks back at you and says"
-    driver "{cps=30}That's fucked up, shooting a man in front of all those people... how does anyone do something like that?"
-    n "{cps=3}I....{nw}"
-    n "{cps=20}I though he deserved it."
+    driver "{cps=35}That's fucked up, shooting a man in front of all those people... how does anyone do something like that?"
+    n "{cps=3}I...{nw}"
+    n "{cps=10}I though he deserved it."
     n "{size=+5}I lost control." with Dissolve(1.0)
 
     $ ending = 5

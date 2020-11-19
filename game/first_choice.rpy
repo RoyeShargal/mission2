@@ -1,43 +1,39 @@
 label chose_devils:
 
     scene bg devils
-    a "That's Julian, their boss."
+    a "{cps=35}That's Julian, their boss."
     #show julian and Albert
-    j "{cps=30}Albert! where is my money? Did you really think you could steal from me and live?"
+    j "{cps=35}Albert! where is my money? Did you really think you could steal from me and live?"
     a "{cps=4}...{nw}"
     play sound "gunshot.mp3"
+    #hide albert with kill
     "{b}Julian pulls out his gun, puts it to Albert’s head and pulls the trigger.\n" with kill
-    j "{cps=30}Get his friend out of here!"
+    j "{cps=35}Get his friend out of here!"
     #maybe change screen here
     n "{size=+5}I will make him pay for this." with dissolve
-
-    stop sound
     jump first_mission
 
 label chose_ghosts:
 
     scene bg ghosts
     #show Frank and Albert
-    a "That's Frank, their boss."
+    "{cps=35}Three men come out of the woods and surround you."
     show frank at right
-    "{cps=30}Three men come out of the woods and surround you."
-    a "{cps=30}I'm sorry I stole from you, what can I do to make it right?"
-    f "{cps=30}This isn't personal Albert, if we let you live, everyone will steal from us"
-    "{cps=30}He puts his hand inside his jacket, you and Albert run to the car."
+    a "{cps=35}That's Frank, their boss."
+    a "{cps=35}I'm sorry I stole from you, what can I do to make it right?"
+    f "{cps=35}This isn't personal Albert, if we let you live, everyone will steal from us"
+    "{cps=35}He puts his hand inside his jacket, you and Albert run to the car."
     play sound "gunshot.mp3"
     #hide albert with kill
     "You hear a gunshot and see Albert fall to the ground" with kill
-    "{cps=30}When you turn around the woods are empty once again."
+    "{cps=35}When you turn around the woods are empty once again."
     n "{size=+5}I will make him pay for this." with dissolve
-
     hide frank
-    stop sound
     jump first_mission
 
 label chose_fight:
 
     scene bg house
-    stop sound
     "{cps=35}You get to Albert's house and go to the phone to call for help,
     Albert is staring out of the window, he is terrified."
     #louder gunshot

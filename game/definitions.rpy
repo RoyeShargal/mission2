@@ -7,6 +7,8 @@ define boss = Character("[boss]", color="#ff530f", what_color="#ff530f", what_pr
 define police = Character("Police", color="#0e64e6", what_color="#0e64e6", what_prefix = '"', what_suffix = '"')
 define other_boss = Character("[other_boss]", color="#ff530f", what_color="#ff530f", what_prefix = '"', what_suffix = '"')
 define driver = Character("Driver", color="#0e64e6", what_color="#0e64e6", what_prefix = '"', what_suffix = '"')
+define bodyguard = Character("Bodyguard", color="#0e64e6", what_color="#0e64e6", what_prefix = '"', what_suffix = '"')
+
 define gang = "gang"
 define other_gang = "other_gang"
 
@@ -37,8 +39,7 @@ default info = False
 #Transitions
 define flash = Fade(0.1, 0.0, 0.1, color="#fff")
 define kill = Fade(0.4, 0.0, 1, color="#b00000")
-define blue = Fade(0.2, 0.0, 0.2, color="#5e9cff")
-define red = Fade(0.2, 0.0, 0.2, color="#ff2445")
+define shot = Fade(0.3, 0.0, 0.3, color="#fff")
 
 #Stats
 define money = 0

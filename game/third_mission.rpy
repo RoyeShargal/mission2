@@ -10,8 +10,8 @@ label third_mission:
     #play sound "horror.wav"
     $ renpy.pause(1.0)
     scene black_car
-    n "{cps=30}I think I saw a car, a black one, wandering by the street,\nfor a bit too long."
-    n  "Someone is definitely spying on me"
+    n "{cps=35}I think I saw a car, a black one, wandering by the street,\nfor a bit too long."
+    n  "{cps=35}Someone is definitely spying on me."
 
     #menu:
     #    "Yes":
@@ -24,54 +24,48 @@ label third_mission:
     #n "{cps=30} Take into consideration these concequences, being spied isn't lovely."
 
     menu:
-        n "{cps=30}What should I do?"
+        n "{cps=35}What should I do?"
 
-        "Put a gps tracker the vehicle":
-            n "{cps=30}The car is the black SKODA, the windows are shadowed."
-            n "{cps=30}This is your moment, all you have been practicing for, you got this."
+        "Put a gps tracker on the vehicle":
+            "{cps=35}The car is the black SKODA, the windows are shadowed."
+            "{cps=35}This is your moment, all you have been practicing for, you got this."
 
-            lana "{cps=25}Rumors say that when putting a gps tracker, there are 50 precent of peing your pants, becareful."
+            #lana "{cps=35}Rumors say that when putting a gps tracker, there are 50 percent of peing your pants, be careful."
+            lana "{cps=35}Be careful, he could be dangerous."
             jump chose_gps
 
         "Kidnap the spy":
-            lana "{cps=30}Once the deed is done, there will be no regrets."
-            n "{cps=30}Regrets are not what we're here for, huh?"
+            lana "{cps=35}Once the deed is done, there will be no regrets."
+            n "{cps=35}Regrets are not what we're here for, huh?"
             show spy
-            spy "{cps=30}Am i dreaming, or noises are being heared?"
-            n "{cps=30}Walk slowly, he might be listening"
-            spy "{cps=30} LEAVE ME ALONE!, YOU DON'T KNOW WHO I AM!"
-            n "{cps=35} That's right, this is not the reason i am here for."
+            spy "{cps=35}Am i dreaming, or can I hear noises?"
+            n "{cps=35}Walk slowly, he might be listening."
+            spy "{cps=35} LEAVE ME ALONE!, YOU DON'T KNOW WHO I AM!"
+            #n "{cps=35} That's right, this is not the reason i am here for."
             jump chose_kidnap
-            #jump after misson 2
+
 label chose_gps:
-    #maybe change
-    n"{cps=20}The tracker has been successfully planted"
-    n"{cps=20}Good Job."
-    "+1,500$" with dissolve
-    $ money+=1500
-    #END
+    "{cps=35}You successfully planted the tracker."
+    "{cps=35}After a few hours of waiting, the spy drives away, he stops when he gets to the [gang] territory"
+    n "{size=+5}They know we are coming after them." with dissolve
+    jump final_fight
 
 label chose_kidnap:
     scene intero
-    spy "{cps=20}I am prepared to be tortured, no information will be getting out of my mouth, FUCKER."
+    spy "{cps=35}I am prepared to be tortured, you won't get any information out of me, FUCKER."
     menu:
-        "Kill":
-            n"{cps=10}Alright then,\nUp you go."
+        "Kill the spy":
+            n"{cps=20}Alright then, up you go."
             play sound "gunshot.mp3"
-            n"{cps=20}Mission failed,\n-5 Fame."
-            $ fame -=5
+            "The spy's body falls to the floor, he won't be spying on you again." with kill
 
         "Interrogate":
-            n"{cps=20}Lets play a small game.\nPick a Number from 1-6,\nI am serious."
+            n "{cps=35}Lets play a small game.\nPick a Number from 1-6.\nI am serious."
             $ num = renpy.input("","",allow="123456")
             if  num>=3:
-                n"{cps=10}Seems like your lucky day lad.\nWait for my call,\nWe will be in touch when I need you."
-                $ fame+=10
-                "+10 Fame" with dissolve
+                n "{cps=35}Seems like your lucky day lad.\nWait for my call, We will be in touch when we need you."
             else:
-                n"{cps=10}Not today,\nSorry."
+                n"{cps=35}Not today.\nSorry."
                 play sound "gunshot.mp3"
+                with kill
             jump final_fight
-
-
-        #END
