@@ -60,19 +60,19 @@ label confrontation:
 
             "Ask Jason to kill the guard":
                 n "{cps=35}Jason, can you kill that guard?"
-                jason "{cps=35}I'm not getting my hands dirty for you, do it yourself"
+                jason "{cps=35}I'm not getting my hands dirty for you, do it yourself."
                 menu:
                     "Kill the guard yourself":
                         play sound "gunshot.mp3"
                         hide bodyguard with kill
                         "You sneak up on the guard and shoot him from behind. You feel sick, you can't recognize yourself anymore." with dissolve
-                        n "{cps=35}It had to be done"
+                        n "{cps=35}It had to be done."
                         jason "{cps=20}Did it?"
                         "{cps=35}the path to [boss] is clear."
                         jump after_guard
 
                     "Let Jason handle it":
-                        n "{cps=35}Okay Jason, let's try things your way"
+                        n "{cps=35}Okay Jason, let's try things your way."
 
     else:
         menu:
@@ -81,6 +81,7 @@ label confrontation:
                 bodyguard "{cps=35}Deal, I never saw you"
                 hide bodyguard with dissolve
                 "{cps=35}the path to [boss] is clear."
+                jump after_guard
 
             "Kill the guard":
                 play sound "gunshot.mp3"
@@ -93,13 +94,13 @@ label confrontation:
 
 label neutralize:
 
-        jason "{cps=35}I got this"
-        #maybe change
-        hide jason with dissolve
-        show jason at middle_right with dissolve
-        "{cps=35}Jason sneaks up on the bodyguard and chokes him unconcious, the path to [boss] is clear."
-        hide bodyguard with dissolve
-        hide jason with dissolve
+    jason "{cps=35}I got this"
+    #maybe change
+    hide jason with dissolve
+    show jason at middle_right with dissolve
+    "{cps=35}Jason sneaks up on the bodyguard and chokes him unconcious, the path to [boss] is clear."
+    hide bodyguard with dissolve
+    hide jason with dissolve
 
 label after_guard:
     scene bg cabin

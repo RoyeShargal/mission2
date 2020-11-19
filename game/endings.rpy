@@ -164,7 +164,7 @@ label ending_6:
 label ending_5:
     play music "ending_music.mp3"
     play sound "gunshot.mp3"
-    "You pull out your gun and shoot [boss] in his chest" with flash
+    "You pull out your gun and shoot [boss] in his chest" with shot
     "{cps=35}Everyone in the diner starts screaming, they are all scared of you."
     "{cps=35}Red and blue lights flash through the window."
     "{cps=35}You look down at [boss] lying on the ground, he says softly as he struggles to breath"
@@ -180,7 +180,7 @@ label ending_5:
     "The driver looks back at you and says"
     driver "{cps=35}That's fucked up, shooting a man in front of all those people... how does anyone do something like that?"
     n "{cps=3}I...{nw}"
-    n "{cps=10}I though he deserved it."
+    n "{cps=15}I though he deserved it."
     n "{size=+5}I lost control." with Dissolve(1.0)
 
     $ ending = 5
