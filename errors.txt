@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/final_fight.rpy", line 86: indentation mismatch.
+File "game/script.rpy", line 10: end of line expected.
+    show albert with dissolve at right
+                              ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Nov 19 23:20:03 2020
+Fri Nov 20 19:43:19 2020

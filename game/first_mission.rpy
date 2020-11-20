@@ -7,11 +7,13 @@ label first_mission:
         $ other_gang = "Ghosts"
         $ boss = j
         $ other_boss = f
+        
     else:
         $ gang = "Ghosts"
         $ other_gang = "Devils"
         $ boss = f
         $ other_boss = j
+        image side boss_side = "frank_side"
 
     scene bg motel
 

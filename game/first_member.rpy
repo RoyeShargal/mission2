@@ -1,4 +1,4 @@
-define lana = Character("Lana", color="#8d3ab0", what_color="#8d3ab0", what_prefix = '"', what_suffix = '"')
+define lana = Character("Lana", color="#8d3ab0", what_color="#8d3ab0",image="lana_side", what_prefix = '"', what_suffix = '"')
 
 label first_member:
     scene bg forest
