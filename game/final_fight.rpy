@@ -1,7 +1,8 @@
 label final_fight:
     scene bg motel
     play sound "knockknock.wav"
-    show screen stats
+    if money:
+        show screen stats
     $ renpy.pause(1.0)
     show lana with dissolve
     lana "{cps=35}%(name)s, I just set the [gang] drug supply on fire to draw them out, they are all looking for me."
@@ -75,6 +76,7 @@ label confrontation:
                 "{cps=35}You walk up to the guard, and offer him 10000$ to look the other way."
                 bodyguard "{cps=35}Deal, I never saw you"
                 hide bodyguard with dissolve
+                hide screen stats
                 "{cps=35}the path to [boss] is clear."
                 jump after_guard
 

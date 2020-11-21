@@ -10,7 +10,7 @@ label ending_scene_1:
 
     "{cps=35}He looks at you in distress."
     boss "{cps=35}Albert knew what would happen if he stole from me, he brought it on himself, all I did was pull the trigger."
-    "{cps=35}You pull out your gun and point it at his head. [boss] starts to beg"
+    "{cps=35}You point your gun at his head. [boss] starts to beg."
     boss "{cps=35}Killing me won’t bring your friend back, it will only make you as bad as me."
 
     menu:
@@ -29,7 +29,7 @@ label ending_1:
         hide julian with kill
     stop music
     "You close your eyes and pull the trigger, everything is silent
-    but the sound of the shot and [boss]'s body falling to the ground." with Dissolve(0.5)
+    but the sound of the shot and [boss]'s body falling to the ground." with Dissolve(1.0)
     play music "ending_music.mp3" fadein 2.0
     "{cps=35}You thought you would feel something, but the emptiness you have been feeling since you started this still remains."
     "{cps=35}Maybe [boss] was right, maybe you did become as bad as him,
@@ -47,9 +47,9 @@ label ending_2:
     "{cps=35}You close your eyes for a moment, and holster your gun. "
     "{cps=35}Maybe he deserves death, but killing him won’t bring Albert back, it will only make you feel worse."
     n "{cps=35}If I ever see you again, you will wish I shot you today."
-    lana "{cps=35} Are you sure boss? You’re really going to forgive him after what he did?"
+    lana "{cps=35}Are you sure %(name)s? You’re really going to forgive him after what he did?"
     n "{cps=35}No, but I won't become like him, it’s not what Albert would have wanted."
-    "{cps=35}She gives you a small nod, and you all walk away."
+    "{cps=35}She gives you a small nod, and you walk away."
 
     $ ending = 2
     jump credits
@@ -57,11 +57,10 @@ label ending_2:
 label ending_scene_2:
 
     scene bg diner
-    hide screen stats
     if ghosts:
         show frank at middle_right
-    #else:
-        #show julian
+    else:
+        show julian at middle_right
     "{cps=35}You find [boss] at the Bendix diner, he is sitting alone with a cup of coffee."
 
     menu:
@@ -128,6 +127,7 @@ label ending_4:
             jump ending_6
         "Run":
             n "RUN!!" with dissolve
+    play sound "shooting.mp3"
     "{cps=35}You run away, but the [other_gang] starts shooting at the police."
     "{cps=35}You hide behind a trash can and see Lana running towards you."
     play sound "gunshot.mp3"

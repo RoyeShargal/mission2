@@ -16,7 +16,7 @@ label first_mission:
 
     scene bg motel
 
-    "{cps=35}You get back back to your motel."
+    "{cps=35}You get back to your motel."
     n "{cps=35}Where is my gun?? I'm going after them!"
     scene bg black
     play sound "fastWalking.wav"

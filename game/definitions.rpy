@@ -70,5 +70,5 @@ transform middle_left:
 
 
 #Stats
-define money = 0
+define money = False
 define ending = 1

@@ -18,10 +18,10 @@ label chose_ghosts:
     scene bg ghosts
     show albert_flip at middle_left
     "{cps=35}Three men come out of the woods and surround you."
-    show frank at middle_right
+    show frank at middle_right with dissolve
     a "{cps=35}I'm sorry I stole from you, what can I do to make it right?"
     f "{cps=35}This isn't personal Albert, if we let you live, everyone will steal from us"
-    "{cps=35}He puts his hand inside his jacket, you and Albert run to the car."
+    "{cps=35}He puts his hand on his gun, you and Albert run to the car."
     play sound "gunshot.mp3"
     hide albert_flip with kill
     "You hear a gunshot and see Albert fall to the ground" with dissolve

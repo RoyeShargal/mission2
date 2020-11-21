@@ -1,26 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/definitions.rpy", line 2, in script
-    define a = Character("Albert", color="#0e64e6", what_color="#0e64e6",image=albert_side, what_prefix = '"', what_suffix = '"')
-  File "game/definitions.rpy", line 2, in <module>
-    define a = Character("Albert", color="#0e64e6", what_color="#0e64e6",image=albert_side, what_prefix = '"', what_suffix = '"')
-NameError: name 'albert_side' is not defined
+  File "game/final_fight.rpy", line 4, in script
+    if ($ money == 10000):
+SyntaxError: invalid syntax (game/final_fight.rpy, line 4)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/definitions.rpy", line 2, in script
-    define a = Character("Albert", color="#0e64e6", what_color="#0e64e6",image=albert_side, what_prefix = '"', what_suffix = '"')
-  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\ast.py", line 2108, in execute
-    value = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/definitions.rpy", line 2, in <module>
-    define a = Character("Albert", color="#0e64e6", what_color="#0e64e6",image=albert_side, what_prefix = '"', what_suffix = '"')
-NameError: name 'albert_side' is not defined
+  File "game/final_fight.rpy", line 4, in script
+    if ($ money == 10000):
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\ast.py", line 1832, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\python.py", line 2057, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\Nitsan\Downloads\renpy-7.3.5-sdk\renpy-7.3.5-sdk\renpy\python.py", line 692, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/final_fight.rpy, line 4)
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
- 
-Sat Nov 21 20:19:26 2020
+ 1.0
+Sun Nov 22 01:39:19 2020

@@ -3,7 +3,7 @@ screen stats(text_size = 20):
         xalign 0.1
         yalign 0.1
         spacing 5
-        text "{color=#4dff3d}$[money]"
+        text "{color=#4dff3d}$10000"
 
 screen ending_credits(text_size = 100, font = "ARMY RUST.ttf"):
     vbox:

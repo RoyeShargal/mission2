@@ -42,7 +42,7 @@ label second_mission:
             $ Jason = True
             n "{cps=35}Good, I was looking for another partner."
             "Jason joined your gang." with dissolve
-            jump third_mission
+            jump final_fight
 
 label chose_kill:
     scene bg sniper
@@ -61,8 +61,8 @@ label chose_kill:
             "Money increased by $10000" with dissolve
 
         "I can't do this":
-            scene motel
-            show jason at middle_right
+            scene bg motel
+            show jason
             jason "{cps=35}What happened man?"
             n "{cps=35}I couldn't do it."
             jason "{cps=35}Then why the hell are you in this business anyway?"
@@ -73,4 +73,4 @@ label chose_kill:
 
     scene bg black
     centered "{size=+50}{color=#ffffff}The day after" with dissolve
-    jump third_mission
+    jump final_fight
