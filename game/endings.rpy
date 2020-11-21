@@ -1,7 +1,3 @@
-transform middle_left:
-    xalign 0.15
-    yalign 1.0
-
 label ending_scene_1:
 
     if devils:
@@ -9,7 +5,7 @@ label ending_scene_1:
         #show julian
     else:
         scene bg ghosts
-        show frank
+        show frank at middle_right
     hide screen stats
 
     "{cps=35}He looks at you in distress."
@@ -63,7 +59,7 @@ label ending_scene_2:
     scene bg diner
     hide screen stats
     if ghosts:
-        show frank
+        show frank at middle_right
     #else:
         #show julian
     "{cps=35}You find [boss] at the Bendix diner, he is sitting alone with a cup of coffee."
@@ -82,7 +78,7 @@ label ending_scene_3:
     "{cps=35}You look outside and see the [other_gang] armed and heading to the diner."
     scene bg dinerParking
     if devils:
-        show frank
+        show frank at middle_right
     #else:
         #show julian
     if jason:
@@ -102,7 +98,7 @@ label ending_scene_3:
 
 label ending_3:
     stop music
-    play music "ending_music.mp3"
+    play music "ending_music.mp3" fadein 2.0
     "{cps=35}You shake [other_boss]'s hand, and tell him you will let it go."
     "{cps=35}You walk back to your men, stand beside them and whisper:"
     n "{size=+5}Kill them." with dissolve
@@ -111,9 +107,10 @@ label ending_3:
         hide frank with kill
     #else:
         #hide julian with kill
-    "{cps=30}You and your men start shooting, the other gang is caught by surprise and has no time to react, it’s a massacre."
+    "You and your men start shooting, the other gang is caught by surprise and has no time to react, it’s a massacre." with dissolve
+    hide lana with dissolve
+    hide jason with dissolve
     "{cps=30}You stand in the dark parking lot, shaking. There are bodies all around you."
-    #"{cps=30}Blood is dripping down your face, but it is not your blood."
     "{cps=20}You finally got revenge."
     "{size=+5}Was it worth it?" with Dissolve(1.0)
 
@@ -122,7 +119,7 @@ label ending_3:
 
 label ending_4:
     stop music
-    play music "ending_music.mp3"
+    play music "ending_music.mp3" fadein 2.0
     "{cps=35}You shake [other_boss]'s hand, and tell him you will let it go."
     "{cps=35}Both sides are still pointing weapons at each other, when several police cars arrive."
     police "{cps=35}This is the police! put down your weapons!"
@@ -134,18 +131,17 @@ label ending_4:
     "{cps=35}You run away, but the [other_gang] starts shooting at the police."
     "{cps=35}You hide behind a trash can and see Lana running towards you."
     play sound "gunshot.mp3"
-    hide lana with dissolve
-    "{cps=35}She gets shot in his chest, two policemen handcuff her and put her in the car." with flash
+    hide lana with shot
+    "{cps=35}She gets shot, two policemen handcuff her and put her in the car."
     scene bg forest
     "{cps=35}There is nothing you can do to help her, you run and stop when you get to the woods, tears fill your eyes."
-    n "{cps=35}This is all my fault."
-    n "{cps=35}I should have never gotten her into this."
-    n "{size=+5}I'm sorry." with Dissolve(1.0)
+    n "{cps=35}This is all my fault." with dissolve
     $ ending = 4
     jump credits
 
 label ending_6:
     "{cps=35}You put your hands on your head and fall to your knees."
+    play sound "shooting.mp3"
     if devils:
         hide frank with kill
     #else:
@@ -172,11 +168,7 @@ label ending_5:
     boss "{cps=35}You killed me for nothing, you are just as bad as him."
     police "{cps=35}This is the police! get out with your hands on your head!"
     scene bg dinerParking
-    if devils:
-        hide frank
-    #else:
-        #hide julian
-    "{cps=35}As soon as you leave the diner, they handcuff you and put you in the police car."
+    "{cps=35}As soon as you leave the diner, the police handcuff you and put you in the police car."
     "The driver looks back at you and says"
     driver "{cps=35}That's fucked up, shooting a man in front of all those people... how does anyone do something like that?"
     n "{cps=3}I...{nw}"

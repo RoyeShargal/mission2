@@ -28,8 +28,7 @@ label third_mission:
 
         "Put a GPS tracker on the vehicle":
             "{cps=35}The car is the black SKODA, the windows are shadowed."
-            "{cps=35}This is your moment, all you have been practicing for, you got this."
-
+            #"{cps=35}This is your moment, all you have been practicing for, you got this."
             #lana "{cps=35}Rumors say that when putting a gps tracker, there are 50 percent of peing your pants, be careful."
             lana "{cps=35}Be careful, whoever is inside could be dangerous."
             jump chose_gps

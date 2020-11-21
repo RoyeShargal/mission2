@@ -1,7 +1,3 @@
-transform middle_right:
-    xalign 0.85
-    yalign 1.0
-
 label final_fight:
     scene bg motel
     play sound "knockknock.wav"
@@ -9,16 +5,17 @@ label final_fight:
     $ renpy.pause(1.0)
     show lana with dissolve
     #reason for them leaving
-    lana "{cps=35}%(name)s, I just set the [gang] drug supply on fire, they are all looking for me.
-    They only left one bodyguard to protect [boss]."
-    lana "{cps=35}They will find me sooner or later, we have to do something."
+    lana "{cps=35}%(name)s, I just set the [gang] drug supply on fire to draw them out, they are all looking for me."
+    lana "They only left one bodyguard to protect [boss], This is our chance."
     menu:
         "What do you do?"
 
         "Go after [boss]":
             jump confrontation
 
-        "Stay and defend yourself when the [gang] arrive":
+        "It's too risky, Stay and defend yourself when the [gang] arrive":
+            stop music
+            play music "ending_music.mp3" fadein 2.0
             "{cps=35}You and Lana take turns watching the window while the other rests"
             "{cps=35}It's 4 in the morning, when you see five armed men walking to the door."
             n "{cps=20}LANA! RUN!"
@@ -26,7 +23,7 @@ label final_fight:
             hide lana with dissolve
             "{cps=35}You try to escape as well, but it's too late, the door blasts open."
             if ghosts:
-                show frank with dissolve
+                show frank at middle_right with dissolve
             else:
                 #show julian
                 " "
@@ -98,8 +95,8 @@ label neutralize:
     #maybe change
     hide jason with dissolve
     show jason at middle_right with dissolve
-    "{cps=35}Jason sneaks up on the bodyguard and chokes him unconcious, the path to [boss] is clear."
     hide bodyguard with dissolve
+    "{cps=35}Jason sneaks up on the bodyguard and chokes him unconcious, the path to [boss] is clear."
     hide jason with dissolve
 
 label after_guard:
@@ -109,11 +106,6 @@ label after_guard:
         "{cps=35}You open the cabin door. There is no one inside, but the phone on the wall is ringing..."
         boss "{cps=35}Did you think it would be that easy? Meet me at the Bendix Diner tommorow at 8pm, we need to talk."
     else:
-        if ghosts:
-            show frank
-        else:
-            " "
-            #show julian
         "{cps=35}You open the cabin door, and see [boss] try to reach for his weapon."
         play sound "gunshot.mp3"
         "You shoot him in the leg and drag him outside." with shot

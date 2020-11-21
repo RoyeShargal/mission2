@@ -62,13 +62,11 @@ label chose_kill:
 
         "I can't do this":
             scene motel
-            show jason
-            q "{cps=35}What happened man?"
+            show jason at middle_right
+            jason "{cps=35}What happened man?"
             n "{cps=35}I couldn't do it."
-            q "{cps=35}Then why the hell are you in this business anyway?"
+            jason "{cps=35}Then why the hell are you in this business anyway?"
             n "{cps=35}The [gang] killed my friend, I can't just let them get away with it."
-            hide q
-            show jason
             jason "{cps=35}I respect that, I'm Jason by the way, I hate those sons of bitches too, if you ever need backup, let me know."
             $ Jason = True
             "Jason joined your gang." with dissolve

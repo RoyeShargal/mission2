@@ -2,7 +2,7 @@ define lana = Character("Lana", color="#8d3ab0", what_color="#8d3ab0",image="lan
 
 label first_member:
     scene bg forest
-    show lana with dissolve
+    show lana at middle_right with dissolve
     lana "{cps=35}I saw what you did."
     n "{cps=35}I don't know what you're talking about..."
     lana "{cps=35}It's ok, I have been spying on the [gang] for a while."

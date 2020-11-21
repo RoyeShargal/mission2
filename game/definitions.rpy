@@ -24,7 +24,7 @@ image bg house= im.Scale("bg house.png", 1920, 1080, bilinear=True)
 image bg sniper= im.Scale("bg sniper.png", 1920, 1080, bilinear=True)
 image bg truck= im.Scale("bg truck.png", 1920, 1080, bilinear=True)
 image bg cabin= im.Scale("bg cabin.png", 1920, 1080, bilinear=True)
-image frank = im.Scale("frank.png",1500, 833, bilinear=True)
+image frank = im.Scale("frank.png", 660, 900, bilinear=True)
 image side frank_side:
     "frank side.png"
     xzoom -1
@@ -36,11 +36,12 @@ image side albert_side:
 image albert_flip:
     im.Scale("Albert.png", 600, 823, bilinear=True)
     xzoom -1
-image lana = im.Scale("lana.png", 300, 798, bilinear=True)
+image lana = im.Scale("lana.png", 583, 767, bilinear=True)
 image side lana_side = "lana side.png"
-image q = im.Scale("q.png", 230, 813, bilinear=True)
+image q = im.Scale("q.png", 514, 880, bilinear=True)
 image side q_side = "q side.png"
-image jason = im.Scale("jason.png", 230, 813, bilinear=True)
+image jason = im.Scale("jason.png", 514, 880, bilinear=True)
+image bodyguard = im.Scale("bodyguard.png", 590, 840, bilinear=True)
 image side jason_side = "jason side.png"
 image side bodyguard_side:
     "bodyguard side"
@@ -57,6 +58,16 @@ default info = False
 define flash = Fade(0.1, 0.0, 0.1, color="#fff")
 define kill = Fade(0.4, 0.0, 1, color="#b00000")
 define shot = Fade(0.3, 0.0, 0.3, color="#fff")
+
+#transforms
+transform middle_right:
+    xalign 0.85
+    yalign 1.0
+
+transform middle_left:
+    xalign 0.15
+    yalign 1.0
+
 
 #Stats
 define money = 0
