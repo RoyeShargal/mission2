@@ -1,6 +1,7 @@
 #define jason = Character("Jason", color="#b021ae", what_color="#b021ae",image = "jason")
 #define f = Character("????", color="#b021ae", what_color="#b021ae", image = "frank")
-define spy = Character("SPY", color="#b021ae", image="spy.png")
+define spy = Character("SPY", color="#b021ae", image="spy_side")
+image side spy_side = "spy side.png"
 
 label third_mission:
     #scene bg black
@@ -36,7 +37,7 @@ label third_mission:
         "Kidnap the spy":
             lana "{cps=35}Once the deed is done, there will be no regrets."
             n "{cps=35}Regrets are not what we're here for, huh?"
-            show spy
+            #show spy
             spy "{cps=35}Am i dreaming, or can I hear noises?"
             n "{cps=35}Walk slowly, he might be listening."
             spy "{cps=35} LEAVE ME ALONE!, YOU DON'T KNOW WHO I AM!"
