@@ -11,7 +11,7 @@ label second_mission:
     $ renpy.pause(1.0)
     n "{cps=35}Who is this???"
 
-    "{cps=35}The lights turn off"
+    "{cps=35}The lights turn off, you hear the door open"
     scene darkdoor with blackFlash
     show q
     q "{cps=35}Are you %(name)s?"
@@ -61,8 +61,8 @@ label chose_kill:
             "Money increased by $10000" with dissolve
 
         "I can't do this":
-            scene darkdoor
-            show q
+            scene motel
+            show jason
             q "{cps=35}What happened man?"
             n "{cps=35}I couldn't do it."
             q "{cps=35}Then why the hell are you in this business anyway?"
