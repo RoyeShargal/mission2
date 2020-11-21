@@ -1,6 +1,6 @@
 #characters
 define a = Character("Albert", color="#0e64e6", what_color="#0e64e6",image="albert_side", what_prefix = '"', what_suffix = '"')
-define j = Character("Julian", color="#995f03", what_color="#995f03", what_prefix = '"', what_suffix = '"')
+define j = Character("Julian", color="#995f03", what_color="#995f03", image="Julian_side", what_prefix = '"', what_suffix = '"')
 define f = Character("Frank", color="#d48506", what_color="#d48506",image="frank_side", what_prefix = '"', what_suffix = '"')
 define n = Character("[name]", color="#F72C00", what_color="#F72C00", what_prefix = '"', what_suffix = '"')
 define boss = Character("[boss]", color="#ff530f", what_color="#ff530f",image="boss_side", what_prefix = '"', what_suffix = '"')
@@ -27,17 +27,17 @@ image bg cabin= im.Scale("bg cabin.png", 1920, 1080, bilinear=True)
 image frank = im.Scale("frank.png", 660, 900, bilinear=True)
 image side frank_side:
     "frank side.png"
-    xzoom -1
 image firstGuy = im.Scale("first_guy.png",805, 1209, bilinear=True)
 image albert = im.Scale("Albert.png", 600, 823, bilinear=True)
 image side albert_side:
     "Albert side.png"
-    xzoom -1
 image albert_flip:
     im.Scale("Albert.png", 600, 823, bilinear=True)
     xzoom -1
 image lana = im.Scale("lana.png", 583, 767, bilinear=True)
-image side lana_side = "lana side.png"
+image julian = im.Scale("Julian.png", 680, 840, bilinear=True)
+image side lana_side = im.Scale("lana side.png", 310, 300, bilinear=True)
+image side Julian_side = "Julian side.png"
 image q = im.Scale("q.png", 514, 880, bilinear=True)
 image side q_side = "q side.png"
 image jason = im.Scale("jason.png", 514, 880, bilinear=True)

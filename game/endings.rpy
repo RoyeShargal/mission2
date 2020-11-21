@@ -2,7 +2,7 @@ label ending_scene_1:
 
     if devils:
         scene bg devils
-        #show julian
+        show julian at middle_right
     else:
         scene bg ghosts
         show frank at middle_right
@@ -25,8 +25,8 @@ label ending_1:
     play sound "gunshot.mp3"
     if ghosts:
         hide frank with kill
-    #else:
-        #hide julian with kill
+    else:
+        hide julian with kill
     stop music
     "You close your eyes and pull the trigger, everything is silent
     but the sound of the shot and [boss]'s body falling to the ground." with Dissolve(0.5)
@@ -49,7 +49,7 @@ label ending_2:
     n "{cps=35}If I ever see you again, you will wish I shot you today."
     lana "{cps=35} Are you sure boss? You’re really going to forgive him after what he did?"
     n "{cps=35}No, but I won't become like him, it’s not what Albert would have wanted."
-    "{cps=35}He gives you a small nod, and you all walk away."
+    "{cps=35}She gives you a small nod, and you all walk away."
 
     $ ending = 2
     jump credits
@@ -79,8 +79,8 @@ label ending_scene_3:
     scene bg dinerParking
     if devils:
         show frank at middle_right
-    #else:
-        #show julian
+    else:
+        show julian at middle_right
     if jason:
         show jason at left
     show lana at middle_left
@@ -105,8 +105,8 @@ label ending_3:
     play sound "shooting.mp3"
     if devils:
         hide frank with kill
-    #else:
-        #hide julian with kill
+    else:
+        hide julian with kill
     "You and your men start shooting, the other gang is caught by surprise and has no time to react, it’s a massacre." with dissolve
     hide lana with dissolve
     hide jason with dissolve
@@ -145,7 +145,7 @@ label ending_6:
     if devils:
         hide frank with kill
     #else:
-        #hide julian with kill
+        hide julian with kill
     "[other_boss] tries to run away and gets shot multiple times." with dissolve
     "{cps=35}The police take everyone into seperate police cars."
     n "{cps=35}Am I going to jail?"

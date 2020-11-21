@@ -4,9 +4,8 @@ label final_fight:
     show screen stats
     $ renpy.pause(1.0)
     show lana with dissolve
-    #reason for them leaving
     lana "{cps=35}%(name)s, I just set the [gang] drug supply on fire to draw them out, they are all looking for me."
-    lana "They only left one bodyguard to protect [boss], This is our chance."
+    lana "{cps=35}They only left one bodyguard to protect [boss], This is our chance."
     menu:
         "What do you do?"
 
@@ -25,8 +24,7 @@ label final_fight:
             if ghosts:
                 show frank at middle_right with dissolve
             else:
-                #show julian
-                " "
+                show julian at middle_right with dissolve
             boss "You shouldn't have fucked with me" with dissolve
             play sound "gunshot.mp3"
             with kill
@@ -92,7 +90,6 @@ label confrontation:
 label neutralize:
 
     jason "{cps=35}I got this"
-    #maybe change
     hide jason with dissolve
     show jason at middle_right with dissolve
     hide bodyguard with dissolve

@@ -3,12 +3,12 @@
 define spy = Character("SPY", color="#b021ae", image="spy.png")
 
 label third_mission:
-    scene bg black
+    #scene bg black
     #centered "{size=+50}{color=#ffffff}MISSION #3"
     #centered "{size=+50}{color=#ffffff}The Spy."
     #scene spied_car_pic
     #play sound "horror.wav"
-    $ renpy.pause(1.0)
+    #$ renpy.pause(1.0)
     scene black_car
     n "{cps=35}I think I saw a car, a black one, wandering by the street for a bit too long."
     n  "{cps=35}Someone is definitely spying on me."

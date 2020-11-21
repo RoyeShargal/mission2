@@ -11,7 +11,7 @@ label second_mission:
     $ renpy.pause(1.0)
     n "{cps=35}Who is this???"
 
-    "{cps=35}The lights turn off, you hear the door open"
+    "{cps=35}The lights turn off, you hear someone come inside."
     scene darkdoor with blackFlash
     show q
     q "{cps=35}Are you %(name)s?"

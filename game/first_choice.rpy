@@ -2,6 +2,7 @@ label chose_devils:
 
     scene bg devils
     show albert_flip at middle_left
+    show julian at middle_right
     j "{cps=35}Albert! where is my money? Did you really think you could steal from me and live?"
     a "{cps=4}...{nw}"
     play sound "gunshot.mp3"
@@ -15,7 +16,6 @@ label chose_devils:
 label chose_ghosts:
 
     scene bg ghosts
-    #show Frank and Albert
     show albert_flip at middle_left
     "{cps=35}Three men come out of the woods and surround you."
     show frank at middle_right
@@ -28,7 +28,6 @@ label chose_ghosts:
     hide frank with dissolve
     "{cps=35}When you turn around the woods are empty once again."
     n "{size=+5}I will make him pay for this." with dissolve
-    hide frank with dissolve
     jump first_mission
 
 label chose_fight:

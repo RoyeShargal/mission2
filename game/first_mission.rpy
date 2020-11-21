@@ -13,13 +13,11 @@ label first_mission:
         $ other_gang = "Devils"
         $ boss = f
         $ other_boss = j
-        image side boss_side = "frank_side"
 
     scene bg motel
 
     "{cps=35}You get back back to your motel."
-    n "{cps=35}Where is my gun?? I am going kill them!"
-    #n "{cps=40}There it is! I'll show them"
+    n "{cps=35}Where is my gun?? I'm going after them!"
     scene bg black
     play sound "fastWalking.wav"
     "{cps=2}{color=#000000}....{/color}{nw}"
@@ -37,6 +35,7 @@ label first_mission:
             n "{cps=35}Thats it! I'm going to end it!"
             if devils:
                 scene bg devils
+                show julian at middle_right with dissolve
             else:
                 scene bg ghosts
                 show frank at middle_right with dissolve
