@@ -6,7 +6,7 @@ label chose_devils:
     j "{cps=35}Albert! where is my money? Did you really think you could steal from me and live?"
     a "{cps=4}...{nw}"
     play sound "gunshot.mp3"
-    hide albert_flip with kill
+    hide albert_flip with dissolve and kill
     "{b}Julian pulls out his gun, puts it to Albert’s head and pulls the trigger.\n" with dissolve
     j "{cps=35}Get his friend out of here!"
     scene bg black
@@ -46,10 +46,10 @@ label chose_fight:
     menu:
         "who do you go after first?"
 
-        "Go after the devils first.":
+        "Go after the Devils (led by Julian)":
             $ devils = True
 
-        "Go after the ghosts first.":
-            $ ghosts = True
+        "Go after the Ghosts (led by Frank)":
+            $ ghosts =True
 
     jump first_mission
